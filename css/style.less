@@ -1,0 +1,63 @@
+body {
+	min-width: 1280px;
+}
+.vertical-offset-100 {
+	padding-top: 100px;
+}
+.login-box {
+	.panel-default {
+		input.form-control {
+			border: none;
+			box-shadow: none;
+			border-bottom: 1px solid blue;
+			border-radius: 0;
+			padding-left: 0;
+			padding-bottom: 15px;
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		span {
+			font-weight: bold;
+			padding-left: 5px;
+		}
+		.panel-title {
+			color: white;
+		}
+		.panel-heading {
+			background-color: #555;
+			border-color: #555;
+		}
+		 .panel-footer{
+			border-color: #555;
+			background-color: transparent;
+		 }
+		.panel-default, .panel-body {
+			border-color: #555;
+		}
+	}
+}
+::-webkit-input-placeholder {
+
+	/* Chrome/Opera/Safari */
+	font-style: italic;
+	padding-left: 5px;
+}
+::-moz-placeholder {
+
+	/* Firefox 19+ */
+	font-style: italic;
+	padding-left: 5px;
+}
+:-ms-input-placeholder {
+
+	/* IE 10+ */
+	font-style: italic;
+	padding-left: 5px;
+}
+:-moz-placeholder {
+
+	/* Firefox 18- */
+	font-style: italic;
+	padding-left: 5px;
+}
