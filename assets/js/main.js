@@ -47,8 +47,8 @@ $(document).ready(function() {
         "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 products-paging'p>>",
         "oLanguage": { "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>' ,
                         "sSearchPlaceholder": 'Search',
-                       "sInfo": 'viewing _START_ to _END_ of _TOTAL_',
-                       "sLengthMenu":'view _MENU_ rows' ,
+                       "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
+                       "sLengthMenu":'View _MENU_ rows' ,
                        "oPaginate": { "sPrevious": "<<", 
                                       "sNext": ">>"
                         }
@@ -142,8 +142,8 @@ $(document).on('click', '.new-product', function () {
         "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 scenarios-paging'p>>",
         "oLanguage": { "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>' ,
                         "sSearchPlaceholder": 'Search',
-                       "sInfo": 'viewing _START_ to _END_ of _TOTAL_',
-                       "sLengthMenu":'view _MENU_ rows' ,
+                       "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
+                       "sLengthMenu":'View _MENU_ rows' ,
                        "oPaginate": { "sPrevious": "<<", 
                                       "sNext": ">>"
                         }
@@ -202,8 +202,8 @@ $('#tasksTable').DataTable({
         "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 tasks-paging'p>>",
         "oLanguage": { "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>' ,
                         "sSearchPlaceholder": 'Search',
-                       "sInfo": 'viewing _START_ to _END_ of _TOTAL_',
-                       "sLengthMenu":'view _MENU_ rows' ,
+                       "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
+                       "sLengthMenu":'View _MENU_ rows' ,
                        "oPaginate": { "sPrevious": "<<", 
                                       "sNext": ">>"
                         }
