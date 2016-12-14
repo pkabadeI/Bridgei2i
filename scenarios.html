@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" />
+    
+  </head>
+  <body>
+    <nav class="navbar header-menu navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#">Tasks</a></li>
+          <li><a href="#">Scenarios</a></li>
+          <li><a href="#">Dashboard</a></li>
+        </ul>
+        <div class="header-rightSection">
+          <a  href="#" rel="logoutPopover" data-popover-content="#userLogoutPopover" data-placement="bottom"><span class="glyphicon glyphicon-user header-icons" aria-hidden="true"></span></a>
+          <!-- logout popover ..... -->
+          <div id="userLogoutPopover" class="hide">
+            <div>
+              <div class="actionPopover">Profile</div>
+              <div class="actionPopover">Logout</div>
+            </div>
+          </div>
+          <!-- logout popover ..... -->
+        </div>
+      </div>
+    </nav>
+    <div class="scenarios-page" id="scenarios">
+      <div class="scenarios-header col-lg-12">
+        <div class="scenarios-title col-lg-2">Scenarios</div>
+        <div class="total-scenarios col-lg-2">
+          <div class="scenarios-count">54</div>
+          <div class="count-title">Total Scenarios</div>
+        </div>
+        <div class="open-scenarios col-lg-2">
+          <div class="scenarios-count">22</div>
+          <div class="count-title">Total New Scenarios</div>
+        </div>
+        <div class="close-scenarios col-lg-2">
+          <div class="scenarios-count">32</div>
+          <div class="count-title">Total Launch as Products</div>
+        </div>
+      </div>
+      <!-- popover -->
+      <div id="scenariosActionContent" class="hide">
+        <div>
+          <div class="actionPopover">Edit</div>
+          <div class="actionPopover">Delete</div>
+          <div class="actionPopover">Launch as Product</div>
+        </div>
+      </div>
+      <!-- popover end -->
+      <table id="scenariosTable" class="table scenarios-table " cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Sl.No</th>
+            <th>Crearted Date</th>
+            <th>Scenario Name</th>
+            <th>Product Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Sep 22,2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Mar 22,2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Jun 22,2016</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td><a  class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Oct 9, 2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nov 14, 2016</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Oct 9, 2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Oct 17, 2016</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Mar 9, 2016</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Dec 19, 2016</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>07/12/2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Dec 7, 2016</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td>Officejet 5612 Wide Format e-All-in-One</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Apr 9, 2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Jan 4, 2016</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td>Officejet Pro 276dw Monochrome Printer</td>
+            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- ............. scenario popup modal ................. -->
+    <div class="modal fade" id="NewScenarioModal" tabindex="-1" role="dialog" aria-labelledby="NewScenarioModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header add-modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="NewScenarioModalLabel">Add New Scenario</h4>
+          </div>
+          <div class="modal-body">
+            
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label  class="col-sm-12 control-label"
+                for="ScenarioName">Scenario Name</label>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control"
+                  id="ScenarioName" placeholder="Enter product name"/>
+                </div>
+                <div class=" col-sm-12 scanario-name-tag">New scenario name and product name remain the same </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-12 control-label"
+                for="MarketFunction" >Market Function</label>
+                <div class="col-sm-12">
+                  <select id="MarketFunction" class="form-control">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-12 control-label"
+                for="MarketGroup" >Market Group</label>
+                <div class="col-sm-12">
+                  <select id="MarketGroup" class="form-control" >
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-12 control-label"
+                for="ExistingProduct" >Select Features from Existing Product</label>
+                <div class="col-sm-12">
+                  <select id="ExistingProduct" class="form-control">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+              </div>
+              <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn active">Global</button>
+                <select id="example-getting-started" multiple="multiple" data-title="Region">
+                  <option>Region 1</option>
+                  <option>Region 2</option>
+                  <option>Region 3</option>
+                  <option>Region 4</option>
+                  <option>Region 5</option>
+                  <option>Region 6</option>
+                </select>
+                <select id="example-getting-started" multiple="multiple" data-title="Country">
+                  <option value="Cheese">Cheese</option>
+                  <option value="Tomatoes">Tomatoes</option>
+                  <option value="Mozzarella">Mozzarella</option>
+                  <option value="Mushrooms">Mushrooms</option>
+                  <option value="Pepperoni">Pepperoni</option>
+                  <option value="Onions">Onions</option>
+                </select>
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">SAVE AND CONTINUE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ............. scenario popup modal ................. -->
+    <footer>
+      <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+      <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+    </footer>
+    
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+    <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script><script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap-multiselect.js"></script>
+  </body>
+</html>
