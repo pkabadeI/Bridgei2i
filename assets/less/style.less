@@ -139,6 +139,9 @@ background-color: #0096d6;
 .logo-image {
 	border-radius: 20px;
 }
+.container-fluid .navbar-brand {
+	margin-left:0px !important;
+}
 .navbar-brand, .navbar-nav > li > a {
 	color: white;
 	font-size: 16px;
@@ -146,13 +149,26 @@ background-color: #0096d6;
 }
 .header-rightSection {
 	float: right;
-	margin-right: 20px;
 	padding: 10px 0px 10px 10px;
+}
+#userLogoutPopover {
+	width:150px;
+	.actionPopover {
+	border-bottom:1px solid lightgrey;
+	padding:10px;
+	cursor: pointer;
+	}
+	.actionPopover:last-child{
+	border-bottom:none;
+	}
+	.actionPopover:hover{
+	background-color:#EFF0F1;
+	}
 }
 .header-icons {
 	font-size: 24px;
 	color: white;
-	padding-right: 10px;
+	padding-right: 25px;
 
 	.fa-user-circle {
 		color: white;
@@ -769,8 +785,8 @@ background-color: #0096d6;
 		background-color: #EFF0F1;
 		margin-left: 15px;
 		border: 1px solid grey;
-		border-top-left-radius: 15px;
-		border-top-right-radius: 15px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 	.dataTables_filter {
 		margin-top: 5px;
@@ -854,6 +870,9 @@ background-color: #0096d6;
 		border-top-left-radius: 15px;
 		border-bottom-left-radius: 15px;
 		border: 1px solid #ccc;
+		& + input{
+		border-left:0px;
+		}
 	}
 }
 .add-modal-header {
@@ -948,8 +967,8 @@ background-color: #0096d6;
 		background-color: #EFF0F1;
 		margin-left: 15px;
 		border: 1px solid grey;
-		border-top-left-radius: 15px;
-		border-top-right-radius: 15px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 	.dataTables_filter {
 		margin-top: 5px;
@@ -996,6 +1015,9 @@ background-color: #0096d6;
 		border-top-left-radius: 15px;
 		border-bottom-left-radius: 15px;
 		border: 1px solid #ccc;
+		& + input{
+		border-left:0px;
+		}
 	}
 }
 .scanario-name-tag {
@@ -1083,8 +1105,8 @@ background-color: #0096d6;
 		background-color: #EFF0F1;
 		margin-left: 15px;
 		border: 1px solid grey;
-		border-top-left-radius: 15px;
-		border-top-right-radius: 15px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 	.dataTables_filter {
 		margin-top: 5px;
@@ -1156,6 +1178,9 @@ background-color: #0096d6;
 		border-top-left-radius: 15px;
 		border-bottom-left-radius: 15px;
 		border: 1px solid #ccc;
+		& + input{
+		border-left:0px;
+		}
 	}
 }
 
