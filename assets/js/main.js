@@ -55,8 +55,8 @@ $(document).ready(function() {
                 $(this).parents('#addcompetitor').find('.count-competitors').html('(' + $(this).parents('#addcompetitor').find('input:checked').length + ')');
             else
                 $(this).parents('#addcompetitor').find('.count-competitors').html('');
-        $(this).parent('.checkbox').toggleClass('checked')
-    }
+            $(this).parent('.checkbox').toggleClass('checked')
+        }
     });
 
     $(document).on("click", ".send-list .close", function(e) {
@@ -105,20 +105,22 @@ $(document).ready(function() {
     });
 
     ///***//////
- 
-/* ............ script for products page start .............. */
 
-   $('.products-page.page-content').find('#productTable').DataTable({
-      "sDom": "<'row col-sm-12 products-toolbar'<'col-sm-8'<'products-table-panel-heading'>><'col-sm-2'<'products-table-panel-action pull-right'>><'col-sm-2'f>>" +
-        "<'row'<'col-sm-12'tr>>" +
-        "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 products-paging'p>>",
-        "oLanguage": { "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>' ,
-                        "sSearchPlaceholder": 'Search',
-                       "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
-                       "sLengthMenu":'View _MENU_ rows' ,
-                       "oPaginate": { "sPrevious": "<<", 
-                                      "sNext": ">>"
-                        }
+    /* ............ script for products page start .............. */
+
+    $('.products-page.page-content').find('#productTable').DataTable({
+        "sDom": "<'row col-sm-12 products-toolbar'<'col-sm-8'<'products-table-panel-heading'>><'col-sm-2'<'products-table-panel-action pull-right'>><'col-sm-2'f>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 products-paging'p>>",
+        "oLanguage": {
+            "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>',
+            "sSearchPlaceholder": 'Search',
+            "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
+            "sLengthMenu": 'View _MENU_ rows',
+            "oPaginate": {
+                "sPrevious": "<<",
+                "sNext": ">>"
+            }
         },
         "aoColumnDefs": [{
             'bSortable': false,
@@ -146,19 +148,32 @@ $(document).ready(function() {
     $(document).on('click', '.new-product', function() {
         $("#NewProductModal").modal('show');
     });
-
- $(function(){
-    $('[rel="logoutPopover"]').popover({
-        container: 'body',
-        //trigger: "hover" ,
-        html: true,
-        content: function () {
-            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
-            return clone;
-        }
-    }).click(function(e) {
-        e.preventDefault();
+    $(function() {
+        $('[rel="actionPopover"]').popover({
+            container: 'body',
+            //trigger: "hover" ,
+            html: true,
+            content: function() {
+                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                return clone;
+            }
+        }).click(function(e) {
+            e.preventDefault();
+        });
     });
+
+    $(function() {
+        $('[rel="logoutPopover"]').popover({
+            container: 'body',
+            //trigger: "hover" ,
+            html: true,
+            content: function() {
+                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                return clone;
+            }
+        }).click(function(e) {
+            e.preventDefault();
+        });
     });
 
     $(function() {
@@ -182,13 +197,13 @@ $(document).ready(function() {
                 $(this).popover('hide');
             }
         });
-    $('[rel="logoutPopover"]').each(function () {
-        // hide any open popovers when the anywhere else in the body is clicked
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-        }
+        $('[rel="logoutPopover"]').each(function() {
+            // hide any open popovers when the anywhere else in the body is clicked
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
     });
-});
 
     /* ............ script for products page ends .............. */
 
@@ -196,16 +211,18 @@ $(document).ready(function() {
     /* ............ script for scenarios page start .............. */
 
     $('#scenariosTable').DataTable({
-      "sDom": "<'row col-sm-12 scenarios-toolbar'<'col-sm-8'<'scenarios-table-panel-heading'>><'col-sm-2'<'scenarios-table-panel-action pull-right'>><'col-sm-2'f>>" +
-        "<'row'<'col-sm-12'tr>>" +
-        "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 scenarios-paging'p>>",
-        "oLanguage": { "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>' ,
-                        "sSearchPlaceholder": 'Search',
-                       "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
-                       "sLengthMenu":'View _MENU_ rows' ,
-                       "oPaginate": { "sPrevious": "<<", 
-                                      "sNext": ">>"
-                        }
+        "sDom": "<'row col-sm-12 scenarios-toolbar'<'col-sm-8'<'scenarios-table-panel-heading'>><'col-sm-2'<'scenarios-table-panel-action pull-right'>><'col-sm-2'f>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 scenarios-paging'p>>",
+        "oLanguage": {
+            "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>',
+            "sSearchPlaceholder": 'Search',
+            "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
+            "sLengthMenu": 'View _MENU_ rows',
+            "oPaginate": {
+                "sPrevious": "<<",
+                "sNext": ">>"
+            }
         },
         "aoColumnDefs": [{
             'bSortable': false,
@@ -259,17 +276,19 @@ $(document).ready(function() {
     /* ............ script for Tasks page start .............. */
 
 
-$('#tasksTable').DataTable({
-      "sDom": "<'row col-sm-12 tasks-toolbar'<'col-sm-10'<'tasks-table-panel-heading'>><'col-sm-2'f>>" +
-        "<'row'<'col-sm-12'tr>>" +
-        "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 tasks-paging'p>>",
-        "oLanguage": { "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>' ,
-                        "sSearchPlaceholder": 'Search',
-                       "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
-                       "sLengthMenu":'View _MENU_ rows' ,
-                       "oPaginate": { "sPrevious": "<<", 
-                                      "sNext": ">>"
-                        }
+    $('#tasksTable').DataTable({
+        "sDom": "<'row col-sm-12 tasks-toolbar'<'col-sm-10'<'tasks-table-panel-heading'>><'col-sm-2'f>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-sm-6'i><'col-sm-2'l><'col-sm-4 tasks-paging'p>>",
+        "oLanguage": {
+            "sSearch": '<div class="input-group"><span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search"></span></span>',
+            "sSearchPlaceholder": 'Search',
+            "sInfo": 'Viewing _START_ to _END_ of _TOTAL_',
+            "sLengthMenu": 'View _MENU_ rows',
+            "oPaginate": {
+                "sPrevious": "<<",
+                "sNext": ">>"
+            }
         },
         'language': {
             'search': '',
@@ -286,9 +305,9 @@ $('#tasksTable').DataTable({
 
     });
 
-     $("div.tasks-table-panel-heading").html('<div class="tasks-table-heading">My Review Tasks</div>');
-     
- 
+    $("div.tasks-table-panel-heading").html('<div class="tasks-table-heading">My Review Tasks</div>');
+
+
 
     /* ............ script for Tasks page ends .............. */
 });
