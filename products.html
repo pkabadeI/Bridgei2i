@@ -113,7 +113,7 @@
                         <th>Sl.No</th>
                         <th>Created Date</th>
                         <th>Product Name</th>
-                        <th>Status</th>
+                        <th>Status <span class="fa fa-filter filter-icon" aria-hidden="true"></span></th>
                         <th>Product Type</th>
                         <th>Reviewers</th>
                         <th>Actions</th>
@@ -267,6 +267,7 @@
                                 for="MarketFunction" >Market Function</label>
                                 <div class="col-sm-12">
                                     <select id="MarketFunction" class="form-control">
+                                     <option value="" disabled selected>Select from list</option>
                                         <option></option>
                                         <option></option>
                                         <option></option>
@@ -278,6 +279,7 @@
                                 for="MarketGroup" >Market Group</label>
                                 <div class="col-sm-12">
                                     <select id="MarketGroup" class="form-control" >
+                                     <option value="" disabled selected>Select from list</option>
                                         <option></option>
                                         <option></option>
                                         <option></option>
@@ -289,12 +291,34 @@
                                 for="ExistingProduct" >Select Features from Existing Product</label>
                                 <div class="col-sm-12">
                                     <select id="ExistingProduct" class="form-control">
+                                     <option value="" disabled selected>Enter or Select from list</option>
                                         <option></option>
                                         <option></option>
                                         <option></option>
                                     </select>
                                 </div>
                             </div>
+                            <label class="col-sm-12 control-label"
+                for="ExistingProduct" >Select Segment</label>
+                             <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn active">Global</button>
+                <select id="example-getting-started" multiple="multiple" data-title="Region">
+                  <option>Region 1</option>
+                  <option>Region 2</option>
+                  <option>Region 3</option>
+                  <option>Region 4</option>
+                  <option>Region 5</option>
+                  <option>Region 6</option>
+                </select>
+                <select id="example-getting-started" multiple="multiple" data-title="Country">
+                  <option value="Cheese">Cheese</option>
+                  <option value="Tomatoes">Tomatoes</option>
+                  <option value="Mozzarella">Mozzarella</option>
+                  <option value="Mushrooms">Mushrooms</option>
+                  <option value="Pepperoni">Pepperoni</option>
+                  <option value="Onions">Onions</option>
+                </select>
+              </div>
                             
                         </form>
                     </div>

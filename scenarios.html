@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-multiselect.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" />
     
@@ -201,7 +200,8 @@
                 <label class="col-sm-12 control-label"
                 for="MarketFunction" >Market Function</label>
                 <div class="col-sm-12">
-                  <select id="MarketFunction" class="form-control">
+                  <select id="MarketFunction" class="form-control" >
+                   <option value="" disabled selected>Select from list</option>
                     <option></option>
                     <option></option>
                     <option></option>
@@ -213,6 +213,7 @@
                 for="MarketGroup" >Market Group</label>
                 <div class="col-sm-12">
                   <select id="MarketGroup" class="form-control" >
+                  <option value="" disabled selected>Select from list</option>
                     <option></option>
                     <option></option>
                     <option></option>
@@ -224,12 +225,15 @@
                 for="ExistingProduct" >Select Features from Existing Product</label>
                 <div class="col-sm-12">
                   <select id="ExistingProduct" class="form-control">
+                  <option value="" disabled selected>Enter or Select from list</option>
                     <option></option>
                     <option></option>
                     <option></option>
                   </select>
                 </div>
               </div>
+              <label class="col-sm-12 control-label"
+                for="ExistingProduct" >Select Segment</label>
               <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn active">Global</button>
                 <select id="example-getting-started" multiple="multiple" data-title="Region">
@@ -249,6 +253,7 @@
                   <option value="Onions">Onions</option>
                 </select>
               </div>
+
               
             </form>
           </div>

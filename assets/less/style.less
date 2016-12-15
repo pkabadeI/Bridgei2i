@@ -772,17 +772,17 @@ background-color: #0096d6;
 #productTable.dataTable thead .sorting {
 	background-image: url(../DataTables-1.10.13/media/images/sort_both.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 100px;
 }
 #productTable.dataTable thead .sorting_asc {
 	background-image: url(../DataTables-1.10.13/media/images/sort_asc.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 100px;
 }
 #productTable.dataTable thead .sorting_desc {
 	background-image: url(../DataTables-1.10.13/media/images/sort_desc.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 100px;
 }
 #productActionPopover {
 	width: 150px;
@@ -949,6 +949,10 @@ background-color: #0096d6;
 	#productTable th {
 		font-size: 16px;
 		font-weight: bold;
+		.filter-icon {
+		margin-left:5px;
+		color:grey;
+		}
 	}
 	.products-table {
 		margin: 0px 15px;
@@ -1043,17 +1047,17 @@ background-color: #0096d6;
 #scenariosTable.dataTable thead .sorting {
 	background-image: url(../DataTables-1.10.13/media/images/sort_both.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 100px;
 }
 #scenariosTable.dataTable thead .sorting_asc {
 	background-image: url(../DataTables-1.10.13/media/images/sort_asc.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 100px;
 }
 #scenariosTable.dataTable thead .sorting_desc {
 	background-image: url(../DataTables-1.10.13/media/images/sort_desc.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 100px;
 }
 .popover-content {
 	padding: 0px;
@@ -1108,6 +1112,7 @@ background-color: #0096d6;
 		font-size: 15px;
 		color: #30a5dc;
 		margin-left: 8px;
+		cursor: pointer;
 	}
 	.scenarios-toolbar {
 		background-color: #EFF0F1;
@@ -1272,6 +1277,10 @@ background-color: #0096d6;
 	#tasksTable th {
 		font-size: 16px;
 		font-weight: bold;
+		.filter-icon {
+		margin-left:5px;
+		color:grey;
+		}
 	}
 	.tasks-table {
 		margin: 0px 15px;
@@ -1426,3 +1435,17 @@ li.active {
 }
 
 /*Componets css*/
+.rejectCommentBox {
+	margin-bottom:15px;
+}
+.reject-table {
+	border:2px solid lightgrey;
+}
+.uparrow {
+	color:green;
+	margin-right:10px;
+}
+.downarrow {
+	color:red;
+	margin-right:10px;
+}
