@@ -3,83 +3,80 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1">
+		
 		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
-	<body>
+	<body >
 		<nav class="navbar header-menu navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand brand-logo"href="#"><img class="logo-image img-responsive img-circle"src="./assets/img/HP-Logo.jpg"></a>
+					<a class="navbar-brand brand-logo" href="#"><img class="logo-image img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a href="edit-product.html">Products</a></li>
-					<li><a href="view-task.html">Tasks</a></li>
-					<li><a href="#">Scenarios</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="tasks.html">Tasks</a></li>
+					<li><a href="scenarios.html">Scenarios</a></li>
 					<li><a href="#">Dashboard</a></li>
 				</ul>
 				<div class="header-rightSection">
-					<span class="fa fa-bell-o header-icons"aria-hidden="true"></span>
-					<span class="fa fa-user-circle header-icons"aria-hidden="true"></span>
+					<span class="fa fa-bell-o header-icons" aria-hidden="true"></span>
+					<span class="fa fa-user-circle header-icons" aria-hidden="true"></span>
 				</div>
 			</div>
 		</nav>
 		<div class="page-section ">
 			<div class="page-header">
 				<span class="font-gray-small col-lg-12"><span class="padding-right-10">MF Color</span>|<span  class="padding-left-10">Home-Low</span></span>
-				<span class="col-lg-10">
-					Task
-					<span class=""> > Officejet 7612 Wide Format e-All-in-One</span>
-					<a href="#" class="edit-link">EDIT</a>
-				</span>
-				<span class="col-lg-2">
-					<span class="download font-gray-small glyphicon glyphicon-arrow-down pull-right">JPG</span>
-					<span class="download font-gray-small glyphicon glyphicon-arrow-down pull-right">PDF</span>
-				</span>
-				<div class="btn-group" role="group" aria-label="...">
-					<button type="button" class="btn active">Global</button>
-					<div class="btn-group" role="group">
-						<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"aria-has popup="true" aria-expanded="false">
-						Region
-						<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">APJ</a></li>
-							<li><a href="#">EMEA</a></li>
-							<li><a href="#">North America</a></li>
-							<li><a href="#">South America</a></li>
-						</ul>
-					</div>
-					<div class="btn-group" role="group">
-						<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Country
-						<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Dropdown link</a></li>
-							<li><a href="#">Dropdown link</a></li>
-						</ul>
+				<span class="col-lg-10">New Product
+					<span class="view-edit-toggle">
+						> <span class="product-name"> Officejet 7612 Wide Format e-All-in-One</span>
+						<input type="text" name="" class="hidden" value="Officejet 7612 Wide Format e-All-in-One"></span>
+						<a href="#" class="toggle-edit-link ">EDIT</a>
+					</span>
+					<span class="col-lg-2">
+						<span class="download font-gray-small glyphicon glyphicon-arrow-down pull-right">JPG</span>
+						<span class="download font-gray-small glyphicon glyphicon-arrow-down pull-right">PDF</span>
+					</span>
+					<div class="btn-group" role="group" aria-label="...">
+						<button type="button" class="btn active">Global</button>
+						<select  multiple="multiple" data-title="Region">
+							<option>Region 1</option>
+							<option>Region 2</option>
+							<option>Region 3</option>
+							<option>Region 4</option>
+							<option>Region 5</option>
+							<option>Region 6</option>
+						</select>
+						<select multiple="multiple" data-title="Country">
+							<option>Country 1</option>
+							<option>Country 2</option>
+							<option>Country 3</option>
+							<option>Country 4</option>
+							<option>Country 5</option>
+							<option>Country 6</option>
+						</select>
 					</div>
 				</div>
-			</div>
-			<div>
-				<div class="page-details edit-scenario col-md-12">
-					<div class="clearfix table-container">
-						<table class="table table-sm table-striped table-bordered">
-							<thead>
-								<tr>
-									<th></th>
-									<th>HP Officejet 7612…</th>
-									<th>Canon Maxify MB2350 <span class="glyphicon-minus glyphicon pull-right"></span></th>
+				<div>
+					<div class="page-details edit-scenario col-md-12">
+						<div class="clearfix table-container">
+							<table class="table table-sm table-striped table-bordered">
+								<thead>
+									<tr>
+										<th></th>
+										<th><div class="text-overflow">HP Officejet 7612 HP Officejet 7612 HP Officejet 7612</div></th>
+										<th><div class="text-overflow">Canon Maxify MB2350</div> <span class="glyphicon-minus remove-column glyphicon pull-right"></span>
+									</th>
 									<th rowspan="2" class="competitors">
-										<span class="addcompetitor glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target="#myModal">COMPETITORS</a> </span>
+										<span class="addcompetitor glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target="#addcompetitor">COMPETITORS</a> </span>
 									</th>
 									<!--<th  class="competitors">
 									</th>
@@ -96,57 +93,57 @@
 							<tbody>
 								<tr>
 									<td>Target PFV</td>
-									<td><span></span><input type="text" name="" value="1.0" maxlength="5" class="input-sm form-control"></td>
+									<td><span class="sign"></span><input type="text" name="" value="1.0" maxlength="5" class="input-sm form-control"></td>
 									<td></td>
 									<td></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>MSRP</td>
-									<td><span>$</span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
-									<td><span>$</span><span>200</span></td>
+									<td><span class="sign">$</span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
+									<td><span class="sign">$</span><span>200</span></td>
 									<td></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>ASP (Average Street Price)</td>
-									<td><span>$</span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
-									<td><span>$</span><span>200</span></td>
+									<td><span class="sign">$</span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
+									<td><span class="sign">$</span><span>200</span></td>
 									<td></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>Discount</td>
-									<td><span></span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
-									<td><span></span><span>200</span></td>
+									<td><span class="sign"></span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
+									<td><span class="sign"></span><span>200</span></td>
 									<td></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>Platform Country Units</td>
-									<td><span></span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
-									<td><span></span><span>200</span></td>
+									<td><span class="sign"></span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
+									<td><span class="sign"></span><span>200</span></td>
 									<td></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>Yield</td>
-									<td><span></span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
-									<td><span></span><span>200</span></td>
+									<td><span class="sign"></span><input type="text" name="" maxlength="5" value="200" class="input-sm form-control"></td>
+									<td><span class="sign"></span><span>200</span></td>
 									<td></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>CPP (K/CMYK)</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<input type="text" name="" maxlength="5" value="2.1" class="input-sm form-control small-input">
 										<span class="sign">/</span>
 										<input type="text" name="" maxlength="5" value="8.1" class="input-sm form-control small-input">
 										<input type="text" name="" maxlength="5" value="8.1" class="input-sm form-control pull-right">
 									</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<span>2.1</span>
 										<span class="sign">/</span>
 										<span>8.1</span>
@@ -167,16 +164,16 @@
 								<tr>
 									<td>ISO Speed</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<input type="text" name="" maxlength="5" value="10" class="input-sm form-control small-input">
-										<span class="sign">/</span>
+										<span >/</span>
 										<input type="text" name="" maxlength="5" value="8" class="input-sm form-control small-input">
 										<span class="pull-right">1</span>
 									</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<span>10</span>
-										<span class="sign">/</span>
+										<span>/</span>
 										<span>8</span>
 										<span class="pull-right">1</span>
 									</td>
@@ -186,14 +183,14 @@
 								<tr>
 									<td>Duplex Speed</td>
 									<td>
-										<span></span>
+										<span  class="sign"></span>
 										<input type="text" name="" maxlength="5" value="12" class="input-sm form-control small-input">
-										<span class="sign">/</span>
+										<span>/</span>
 										<input type="text" name="" maxlength="5" value="18" class="input-sm form-control small-input">
 										<span class="pull-right">1</span>
 									</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<span>12</span>
 										<span>/</span>
 										<span>8</span>
@@ -206,13 +203,13 @@
 								<tr>
 									<td>Display</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<input type="text" name="" maxlength="5" value="2.65" class="input-sm form-control ">
 										<span class="sign">"</span>
 										<span class="pull-right">2</span>
 									</td>
 									<td>
-										<span></span>
+										<span class="sign"></span>
 										<span>2.65</span>
 										<span class="sign">"</span>
 										<span class="pull-right">2</span>
@@ -223,15 +220,15 @@
 								<tr>
 									<td>ADF</td>
 									<td>
-										<span></span>
+										<span  class="sign"></span>
 										<input type="text" name="" maxlength="5" value="50" class="input-sm form-control ">
-										<span class="sign">pg mDuplex</span>
+										<span>pg mDuplex</span>
 										<span class="pull-right">10</span>
 									</td>
 									<td>
-										<span></span>
+										<span  class="sign"></span>
 										<span>50</span>
-										<span class="sign">pg mDuplex</span>
+										<span>pg mDuplex</span>
 										<span class="pull-right">10</span>
 									</td>
 									<td></td>
@@ -240,12 +237,12 @@
 								<tr>
 									<td>Trays</td>
 									<td>
-										<span></span>
+										<span  class="sign"></span>
 										<input type="text" name="" maxlength="5" value="65" class="input-sm form-control ">
 										<span class="">pg</span>
 										<span class="pull-right">2</span></td>
 										<td>
-											<span></span>
+											<span class="sign"></span>
 											<span>250</span>
 											<span class="">pg</span>
 											<span class="pull-right">2</span></td>
@@ -254,714 +251,518 @@
 										<td></td>
 										<td></td>
 									</tr>
-									<tr>
-										<td>Custom Field 1</td>
+									<tr class="custom-field">
+										<td>Custom Field <span class="count">1</span></td>
 										<td>
+											<span class="sign"></span>
+											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
+											<span class="pull-right">2</span>
+										</td>
+										<td>
+											<span class="sign"></span>
+											<span>10</span>
 											<span></span>
+											<span>2</span>
+										</td>
+										<td></td>
+										<td><span class="glyphicon glyphicon-minus remove-row pull-right"></span></td>
+									</tr>
+									<tr>
+										<td class="new-feature">
+											<span class="glyphicon glyphicon-plus font-gray-small"></span>
+											<span>New Feature </span>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr >
+										<td class="section-head">
+											Other Features
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>NFC</td>
+										<td>
+											<span class="sign"></span>
+											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
+											<span class="pull-right">1</span>
+										</td>
+										<td>
+											<span class="sign"></span>
+											<span>No</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Ink type</td>
+										<td>
+											<span class="sign"></span>
+											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
+											<span class="pull-right">1</span>
+										</td>
+										<td>
+											<span class="sign"></span>
+											<span>Pigment</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Warranty</td>
+										<td>
+											<span class="sign"></span>
+											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
+											
+											<span class="sign"></span>
+											<span class="pull-right">2</span>
+										</td>
+										<td>
+											<span class="sign"></span>
+											<span>1 year</span>
+											<span class="pull-right">2</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Brand</td>
+										<td>
+											<span class="sign"></span>
+											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
+											<span class="pull-right">10</span>
+										</td>
+										<td>
+											<span class="sign"></span>
+											<span>HP</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Lorem</td>
+										<td>
+											<span class="sign"></span>
 											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
 											<span class="pull-right">2</span></td>
 											<td>
-												<span></span>
-												<span>10</span>
-												<span></span>
-												<span>2</span>
-											</td>
-											<td></td>
-											<td><span class="glyphicon glyphicon-minus pull-right"></span></td>
-										</tr>
-										<tr>
-											<td class="new-feature"><span class="glyphicon glyphicon-plus font-gray-small"></span>New Feature </td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td><span class="glyphicon glyphicon-minus pull-right"></span></td>
-										</tr>
-										<tr >
-											<td class="section-head">
-												Other Features
-											</td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td>NFC</td>
-											<td>
-												<span></span>
-												<select class="form-control select-small">
-													<option>No</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select>
-												<span class="pull-right">1</span>
-											</td>
-											<td>
-												<span></span>
-												<span>No</span>
-											</td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td>Ink type</td>
-											<td>
-												<span></span>
-												<select class="form-control ">
-													<option>Pigment</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select>
-												<span class="pull-right">1</span>
-											</td>
-											<td>
-												<span></span>
-												<span>Pigment</span>
-											</td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td>Warranty</td>
-											<td>
-												<span></span>
-												<select class="form-control ">
-													<option>1 year</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select>
 												<span class="sign"></span>
-												<span class="pull-right">2</span>
-											</td>
-											<td>
-												<span></span>
-												<span>1 year</span>
-												<span class="pull-right">2</span>
+												<span>200</span>
 											</td>
 											<td></td>
 											<td></td>
 										</tr>
+										<tr class="custom-field">
+											<td>Custom Field <span class="count">1</span></td>
+											<td><span class="sign"></span>
+											<input type="text" name="" maxlength="5" value="10" class="input-sm form-control ">
+											
+											<span class="pull-right">2</span></td>
+											<td>
+												<span class="sign"></span>
+												<span>200</span>
+											</td>
+											<td></td>
+											<td><span class="glyphicon glyphicon-minus remove-row pull-right"></span></td>
+										</tr>
 										<tr>
-											<td>Brand</td>
-											<td>
-												<span></span>
-												<select class="form-control ">
-													<option>HP</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select>
-												<span class="pull-right">10</span>
+											<td class="new-feature">
+												<span class="glyphicon glyphicon-plus font-gray-small"></span>
+												<span>New Feature </span>
 											</td>
-											<td>
-												<span></span>
-												<span>HP</span>
-											</td>
+											<td></td>
+											<td></td>
 											<td></td>
 											<td></td>
 										</tr>
-										<tr>
-											<td>Lorem</td>
-											<td>
-												<span></span>
-												<select class="form-control ">
-													<option>200</option>
-													<option>300</option>
-													<option>305</option>
-													<option>400</option>
-												</select>
-												<span class="pull-right">2</span></td>
-												<td>
-													<span></span>
-													<span>200</span>
-												</td>
-												<td></td>
-												<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class="summary">Total Adjusments:</td>
+										<td>
+											<span class="pull-right">0</span>
+											<span class="pull-right">$</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class="summary">Adjusted ASP:</td>
+										<td>
+											<span class="pull-right">114</span>
+											<span class="pull-right">$</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class="summary">ASP PFV:</td>
+										<td>
+											<span class="pull-right">1.75</span>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="page-footer col-md-12">
+						<div class="footer-button">
+							<button type="button" class="btn btn-default ">Cancel</button>
+							<button type="button" class="btn btn-default">Save</button>
+							<button type="button" class="btn btn-default">Save and exit</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sendForReview">Save For Review</button>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+					<span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+				</footer>
+				<!-- Modal -->
+				<div id="addcompetitor" class="modal fade" role="dialog">
+					<div class="modal-dialog modal-lg" >
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Add Competitors<span class="count-competitors"></span></h4>
+							</div>
+							<div class="modal-body">
+								<div class="btn-group" role="group" aria-label="..." class="col-md-6">
+									<button type="button" class="btn active">Global</button>
+									<select  multiple="multiple" data-title="Region">
+										<option>Region 1</option>
+										<option>Region 2</option>
+										<option>Region 3</option>
+										<option>Region 4</option>
+										<option>Region 5</option>
+										<option>Region 6</option>
+									</select>
+									<select multiple="multiple" data-title="Country">
+										<option>Country 1</option>
+										<option>Country 2</option>
+										<option>Country 3</option>
+										<option>Country 4</option>
+										<option>Country 5</option>
+										<option>Country 6</option>
+									</select>
+								</div>
+								<div class="custom-search-input col-md-6 pull-right">
+									<div class="input-group col-md-12">
+										<span class=" glyphicon glyphicon-search"></span>
+										<input type="text" class="  search-query form-control" placeholder="Search" />
+									</div>
+								</div>
+								<div class="products-page">
+									<table id="productTable" class="table products-table " cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>Product</th>
+												<th>Created Date</th>
+												<th>Vertical Print Res.</th>
+												<th>Lorem</th>
+												<th>Segment</th>
+												<th>Lorem</th>
+												<th>Lorem</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> Pixma</span></td>
+												<td>Lorem</td>
+												<td>400</td>
+												<td>500</td>
+												<td>300</td>
+												<td>20</td>
+												<td>20</td>
 											</tr>
 											<tr>
-												<td>Custom Field 1</td>
-												<td><span></span>
-												<select class="form-control ">
-													<option>200</option>
-													<option>300</option>
-													<option>305</option>
-													<option>400</option>
-												</select>
-												<span class="pull-right">2</span></td>
-												<td>
-													<span></span>
-													<span>200</span>
-												</td>
-												<td></td>
-												<td><span class="glyphicon glyphicon-minus pull-right"></span></td>
+												<td><span class="checkbox"> <input type="checkbox" name=""> HL-54405</span></td>
+												<td>HP</td>
+												<td>Officejet Pro 276dw Monochrome Printer</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
 											</tr>
 											<tr>
-												<td class="new-feature"><span class="glyphicon glyphicon-plus font-gray-small"></span>New Feature </td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
+												<td><span class="checkbox"> <input type="checkbox" name=""> HL-5350</span></td>
+												<td>HP</td>
+												<td>Officejet 5612 Wide Format e-All-in-One</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
 											</tr>
 											<tr>
-												<td></td>
-												<td class="summary">Total Adjusments:</td>
-												<td>
-													<span class="pull-right">0</span>
-													<span class="pull-right">$</span>
-												</td>
-												<td></td>
-												<td></td>
+												<td><span class="checkbox"> <input type="checkbox" name=""> B423fhh</span></td>
+												<td>Dell</td>
+												<td>1200</td>
+												<td>50</td>
+												<td>200</td>
+												<td>200</td>
+												<td>30</td>
 											</tr>
 											<tr>
-												<td></td>
-												<td class="summary">Adjusted ASP:</td>
-												<td>
-													<span class="pull-right">114</span>
-													<span class="pull-right">$</span>
-												</td>
-												<td></td>
-												<td></td>
+												<td><span class="checkbox"> <input type="checkbox" name=""> HPP</span></td>
+												<td>Nov 14, 2016</td>
+												<td>Officejet 5612 Wide Format e-All-in-One</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
 											</tr>
 											<tr>
-												<td></td>
-												<td class="summary">ASP PFV:</td>
-												<td>
-													<span class="pull-right">1.75</span>
-												</td>
-												<td></td>
-												<td></td>
+												<td><span class="checkbox"> <input type="checkbox" name=""> LDD</span></td>
+												<td>Oct 9, 2016</td>
+												<td>Officejet Pro 276dw Monochrome Printer</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
 											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> Some </span></td>
+												<td>Oct 17, 2016</td>
+												<td>Officejet 5612 Wide Format e-All-in-One</td>
+												<td>Open</td>
+												<td>New Product</td>
+											<td>30</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> LEDD</span></td>
+												<td>Mar 9, 2016</td>
+												<td>Officejet 5612 Wide Format e-All-in-One</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> LG</span></td>
+												<td>Dec 19, 2016</td>
+												<td>Officejet 5612 Wide Format e-All-in-One</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> 10</span></td>
+												<td>07/12/2016</td>
+												<td>Officejet Pro 276dw Monochrome Printer</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> 11</span></td>
+												<td>Dec 7, 2016</td>
+												<td>Officejet 5612 Wide Format e-All-in-One</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> 12</span></td>
+												<td>Apr 9, 2016</td>
+												<td>Officejet Pro 276dw Monochrome Printer</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
+											</tr>
+											<tr>
+												<td><span class="checkbox"> <input type="checkbox" name=""> 13</span></td>
+												<td>Jan 4, 2016</td>
+												<td>Officejet Pro 276dw Monochrome Printer</td>
+												<td>Open</td>
+												<td>New Product</td>
+												<td>30</td>
+												<td>20</td>
+											</tr>
+										</tbody>
 									</table>
 								</div>
 							</div>
-							<div class="page-footer col-md-12">
-								<div class="footer-button">
-									<button type="button" class="btn btn-default ">CANCEL</button>
-									<button type="button" class="btn btn-default">SAVE AND EXIT</button>
-									<button type="button" class="btn btn-default">FORWARD TO </button>
-									<button type="button" class="btn btn-danger">REJECT</button>
-									<button type="button" class="btn btn-success">APPROVE</button>
-								</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">DONE</button>
 							</div>
 						</div>
-						<footer>
-							<span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
-							<span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
-						</footer>
-						<template>
-						<div>Template used:<span>0</span></div>
-						</template>
-						<!-- Modal -->
-						<div id="myModal" class="modal fade" role="dialog">
-							<div class="modal-dialog">
-								<!-- Modal content-->
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Add Competitors</h4>
+					</div>
+				</div>
+			</footer>
+			<!-- Modal -->
+			<div id="sendForReview" class="modal fade " role="dialog">
+				<div class="modal-dialog modal-lg">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Send for Review & Approval</h4>
+						</div>
+						<div class="modal-body">
+							<div class="row send-box clearfix">
+								<div class="col-md-6 pull-left">
+									<div class="btn-group" role="group" aria-label="...">
+										<button type="button" class="btn active">Global</button>
+										<select  multiple="multiple" data-title="Region">
+											<option>Region 1</option>
+											<option>Region 2</option>
+											<option>Region 3</option>
+											<option>Region 4</option>
+											<option>Region 5</option>
+											<option>Region 6</option>
+										</select>
+										<select multiple="multiple" data-title="Country">
+											<option>Country 1</option>
+											<option>Country 2</option>
+											<option>Country 3</option>
+											<option>Country 4</option>
+											<option>Country 5</option>
+											<option>Country 6</option>
+										</select>
 									</div>
-									<div class="modal-body">
-										<table id="example" class="display" cellspacing="0" width="100%">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Start date</th>
-													<th>Salary</th>
-												</tr>
-											</thead>
-											<tfoot>
-											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th>Age</th>
-												<th>Start date</th>
-												<th>Salary</th>
-											</tr>
-											</tfoot>
-											<tbody>
-												<tr>
-													<td>Tiger Nixon</td>
-													<td>System Architect</td>
-													<td>Edinburgh</td>
-													<td>61</td>
-													<td>2011/04/25</td>
-													<td>$320,800</td>
-												</tr>
-												<tr>
-													<td>Garrett Winters</td>
-													<td>Accountant</td>
-													<td>Tokyo</td>
-													<td>63</td>
-													<td>2011/07/25</td>
-													<td>$170,750</td>
-												</tr>
-												<tr>
-													<td>Ashton Cox</td>
-													<td>Junior Technical Author</td>
-													<td>San Francisco</td>
-													<td>66</td>
-													<td>2009/01/12</td>
-													<td>$86,000</td>
-												</tr>
-												<tr>
-													<td>Cedric Kelly</td>
-													<td>Senior Javascript Developer</td>
-													<td>Edinburgh</td>
-													<td>22</td>
-													<td>2012/03/29</td>
-													<td>$433,060</td>
-												</tr>
-												<tr>
-													<td>Airi Satou</td>
-													<td>Accountant</td>
-													<td>Tokyo</td>
-													<td>33</td>
-													<td>2008/11/28</td>
-													<td>$162,700</td>
-												</tr>
-												<tr>
-													<td>Brielle Williamson</td>
-													<td>Integration Specialist</td>
-													<td>New York</td>
-													<td>61</td>
-													<td>2012/12/02</td>
-													<td>$372,000</td>
-												</tr>
-												<tr>
-													<td>Herrod Chandler</td>
-													<td>Sales Assistant</td>
-													<td>San Francisco</td>
-													<td>59</td>
-													<td>2012/08/06</td>
-													<td>$137,500</td>
-												</tr>
-												<tr>
-													<td>Rhona Davidson</td>
-													<td>Integration Specialist</td>
-													<td>Tokyo</td>
-													<td>55</td>
-													<td>2010/10/14</td>
-													<td>$327,900</td>
-												</tr>
-												<tr>
-													<td>Colleen Hurst</td>
-													<td>Javascript Developer</td>
-													<td>San Francisco</td>
-													<td>39</td>
-													<td>2009/09/15</td>
-													<td>$205,500</td>
-												</tr>
-												<tr>
-													<td>Sonya Frost</td>
-													<td>Software Engineer</td>
-													<td>Edinburgh</td>
-													<td>23</td>
-													<td>2008/12/13</td>
-													<td>$103,600</td>
-												</tr>
-												<tr>
-													<td>Jena Gaines</td>
-													<td>Office Manager</td>
-													<td>London</td>
-													<td>30</td>
-													<td>2008/12/19</td>
-													<td>$90,560</td>
-												</tr>
-												<tr>
-													<td>Quinn Flynn</td>
-													<td>Support Lead</td>
-													<td>Edinburgh</td>
-													<td>22</td>
-													<td>2013/03/03</td>
-													<td>$342,000</td>
-												</tr>
-												<tr>
-													<td>Charde Marshall</td>
-													<td>Regional Director</td>
-													<td>San Francisco</td>
-													<td>36</td>
-													<td>2008/10/16</td>
-													<td>$470,600</td>
-												</tr>
-												<tr>
-													<td>Haley Kennedy</td>
-													<td>Senior Marketing Designer</td>
-													<td>London</td>
-													<td>43</td>
-													<td>2012/12/18</td>
-													<td>$313,500</td>
-												</tr>
-												<tr>
-													<td>Tatyana Fitzpatrick</td>
-													<td>Regional Director</td>
-													<td>London</td>
-													<td>19</td>
-													<td>2010/03/17</td>
-													<td>$385,750</td>
-												</tr>
-												<tr>
-													<td>Michael Silva</td>
-													<td>Marketing Designer</td>
-													<td>London</td>
-													<td>66</td>
-													<td>2012/11/27</td>
-													<td>$198,500</td>
-												</tr>
-												<tr>
-													<td>Paul Byrd</td>
-													<td>Chief Financial Officer (CFO)</td>
-													<td>New York</td>
-													<td>64</td>
-													<td>2010/06/09</td>
-													<td>$725,000</td>
-												</tr>
-												<tr>
-													<td>Gloria Little</td>
-													<td>Systems Administrator</td>
-													<td>New York</td>
-													<td>59</td>
-													<td>2009/04/10</td>
-													<td>$237,500</td>
-												</tr>
-												<tr>
-													<td>Bradley Greer</td>
-													<td>Software Engineer</td>
-													<td>London</td>
-													<td>41</td>
-													<td>2012/10/13</td>
-													<td>$132,000</td>
-												</tr>
-												<tr>
-													<td>Dai Rios</td>
-													<td>Personnel Lead</td>
-													<td>Edinburgh</td>
-													<td>35</td>
-													<td>2012/09/26</td>
-													<td>$217,500</td>
-												</tr>
-												<tr>
-													<td>Jenette Caldwell</td>
-													<td>Development Lead</td>
-													<td>New York</td>
-													<td>30</td>
-													<td>2011/09/03</td>
-													<td>$345,000</td>
-												</tr>
-												<tr>
-													<td>Yuri Berry</td>
-													<td>Chief Marketing Officer (CMO)</td>
-													<td>New York</td>
-													<td>40</td>
-													<td>2009/06/25</td>
-													<td>$675,000</td>
-												</tr>
-												<tr>
-													<td>Caesar Vance</td>
-													<td>Pre-Sales Support</td>
-													<td>New York</td>
-													<td>21</td>
-													<td>2011/12/12</td>
-													<td>$106,450</td>
-												</tr>
-												<tr>
-													<td>Doris Wilder</td>
-													<td>Sales Assistant</td>
-													<td>Sidney</td>
-													<td>23</td>
-													<td>2010/09/20</td>
-													<td>$85,600</td>
-												</tr>
-												<tr>
-													<td>Angelica Ramos</td>
-													<td>Chief Executive Officer (CEO)</td>
-													<td>London</td>
-													<td>47</td>
-													<td>2009/10/09</td>
-													<td>$1,200,000</td>
-												</tr>
-												<tr>
-													<td>Gavin Joyce</td>
-													<td>Developer</td>
-													<td>Edinburgh</td>
-													<td>42</td>
-													<td>2010/12/22</td>
-													<td>$92,575</td>
-												</tr>
-												<tr>
-													<td>Jennifer Chang</td>
-													<td>Regional Director</td>
-													<td>Singapore</td>
-													<td>28</td>
-													<td>2010/11/14</td>
-													<td>$357,650</td>
-												</tr>
-												<tr>
-													<td>Brenden Wagner</td>
-													<td>Software Engineer</td>
-													<td>San Francisco</td>
-													<td>28</td>
-													<td>2011/06/07</td>
-													<td>$206,850</td>
-												</tr>
-												<tr>
-													<td>Fiona Green</td>
-													<td>Chief Operating Officer (COO)</td>
-													<td>San Francisco</td>
-													<td>48</td>
-													<td>2010/03/11</td>
-													<td>$850,000</td>
-												</tr>
-												<tr>
-													<td>Shou Itou</td>
-													<td>Regional Marketing</td>
-													<td>Tokyo</td>
-													<td>20</td>
-													<td>2011/08/14</td>
-													<td>$163,000</td>
-												</tr>
-												<tr>
-													<td>Michelle House</td>
-													<td>Integration Specialist</td>
-													<td>Sidney</td>
-													<td>37</td>
-													<td>2011/06/02</td>
-													<td>$95,400</td>
-												</tr>
-												<tr>
-													<td>Suki Burks</td>
-													<td>Developer</td>
-													<td>London</td>
-													<td>53</td>
-													<td>2009/10/22</td>
-													<td>$114,500</td>
-												</tr>
-												<tr>
-													<td>Prescott Bartlett</td>
-													<td>Technical Author</td>
-													<td>London</td>
-													<td>27</td>
-													<td>2011/05/07</td>
-													<td>$145,000</td>
-												</tr>
-												<tr>
-													<td>Gavin Cortez</td>
-													<td>Team Leader</td>
-													<td>San Francisco</td>
-													<td>22</td>
-													<td>2008/10/26</td>
-													<td>$235,500</td>
-												</tr>
-												<tr>
-													<td>Martena Mccray</td>
-													<td>Post-Sales support</td>
-													<td>Edinburgh</td>
-													<td>46</td>
-													<td>2011/03/09</td>
-													<td>$324,050</td>
-												</tr>
-												<tr>
-													<td>Unity Butler</td>
-													<td>Marketing Designer</td>
-													<td>San Francisco</td>
-													<td>47</td>
-													<td>2009/12/09</td>
-													<td>$85,675</td>
-												</tr>
-												<tr>
-													<td>Howard Hatfield</td>
-													<td>Office Manager</td>
-													<td>San Francisco</td>
-													<td>51</td>
-													<td>2008/12/16</td>
-													<td>$164,500</td>
-												</tr>
-												<tr>
-													<td>Hope Fuentes</td>
-													<td>Secretary</td>
-													<td>San Francisco</td>
-													<td>41</td>
-													<td>2010/02/12</td>
-													<td>$109,850</td>
-												</tr>
-												<tr>
-													<td>Vivian Harrell</td>
-													<td>Financial Controller</td>
-													<td>San Francisco</td>
-													<td>62</td>
-													<td>2009/02/14</td>
-													<td>$452,500</td>
-												</tr>
-												<tr>
-													<td>Timothy Mooney</td>
-													<td>Office Manager</td>
-													<td>London</td>
-													<td>37</td>
-													<td>2008/12/11</td>
-													<td>$136,200</td>
-												</tr>
-												<tr>
-													<td>Jackson Bradshaw</td>
-													<td>Director</td>
-													<td>New York</td>
-													<td>65</td>
-													<td>2008/09/26</td>
-													<td>$645,750</td>
-												</tr>
-												<tr>
-													<td>Olivia Liang</td>
-													<td>Support Engineer</td>
-													<td>Singapore</td>
-													<td>64</td>
-													<td>2011/02/03</td>
-													<td>$234,500</td>
-												</tr>
-												<tr>
-													<td>Bruno Nash</td>
-													<td>Software Engineer</td>
-													<td>London</td>
-													<td>38</td>
-													<td>2011/05/03</td>
-													<td>$163,500</td>
-												</tr>
-												<tr>
-													<td>Sakura Yamamoto</td>
-													<td>Support Engineer</td>
-													<td>Tokyo</td>
-													<td>37</td>
-													<td>2009/08/19</td>
-													<td>$139,575</td>
-												</tr>
-												<tr>
-													<td>Thor Walton</td>
-													<td>Developer</td>
-													<td>New York</td>
-													<td>61</td>
-													<td>2013/08/11</td>
-													<td>$98,540</td>
-												</tr>
-												<tr>
-													<td>Finn Camacho</td>
-													<td>Support Engineer</td>
-													<td>San Francisco</td>
-													<td>47</td>
-													<td>2009/07/07</td>
-													<td>$87,500</td>
-												</tr>
-												<tr>
-													<td>Serge Baldwin</td>
-													<td>Data Coordinator</td>
-													<td>Singapore</td>
-													<td>64</td>
-													<td>2012/04/09</td>
-													<td>$138,575</td>
-												</tr>
-												<tr>
-													<td>Zenaida Frank</td>
-													<td>Software Engineer</td>
-													<td>New York</td>
-													<td>63</td>
-													<td>2010/01/04</td>
-													<td>$125,250</td>
-												</tr>
-												<tr>
-													<td>Zorita Serrano</td>
-													<td>Software Engineer</td>
-													<td>San Francisco</td>
-													<td>56</td>
-													<td>2012/06/01</td>
-													<td>$115,000</td>
-												</tr>
-												<tr>
-													<td>Jennifer Acosta</td>
-													<td>Junior Javascript Developer</td>
-													<td>Edinburgh</td>
-													<td>43</td>
-													<td>2013/02/01</td>
-													<td>$75,650</td>
-												</tr>
-												<tr>
-													<td>Cara Stevens</td>
-													<td>Sales Assistant</td>
-													<td>New York</td>
-													<td>46</td>
-													<td>2011/12/06</td>
-													<td>$145,600</td>
-												</tr>
-												<tr>
-													<td>Hermione Butler</td>
-													<td>Regional Director</td>
-													<td>London</td>
-													<td>47</td>
-													<td>2011/03/21</td>
-													<td>$356,250</td>
-												</tr>
-												<tr>
-													<td>Lael Greer</td>
-													<td>Systems Administrator</td>
-													<td>London</td>
-													<td>21</td>
-													<td>2009/02/27</td>
-													<td>$103,500</td>
-												</tr>
-												<tr>
-													<td>Jonas Alexander</td>
-													<td>Developer</td>
-													<td>San Francisco</td>
-													<td>30</td>
-													<td>2010/07/14</td>
-													<td>$86,500</td>
-												</tr>
-												<tr>
-													<td>Shad Decker</td>
-													<td>Regional Director</td>
-													<td>Edinburgh</td>
-													<td>51</td>
-													<td>2008/11/13</td>
-													<td>$183,000</td>
-												</tr>
-												<tr>
-													<td>Michael Bruce</td>
-													<td>Javascript Developer</td>
-													<td>Singapore</td>
-													<td>29</td>
-													<td>2011/06/27</td>
-													<td>$183,000</td>
-												</tr>
-												<tr>
-													<td>Donna Snider</td>
-													<td>Customer Support</td>
-													<td>New York</td>
-													<td>27</td>
-													<td>2011/01/25</td>
-													<td>$112,000</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="custom-search-input">
+										<div class="input-group col-md-12">
+											<span class=" glyphicon glyphicon-search"></span>
+											<input type="text" class="  search-query form-control" placeholder="Search" />
+										</div>
 									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<div class="search-list">
+										<ul>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image2.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image3.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image4.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+											<li>
+												<span class="checkbox"><input type="checkbox" name=""></span>
+												<img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+												<span class="name">Barbara</span>
+												<span class="font-gray-small division">- RM</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 pull-right">
+									<div class="top-right">
+										<span>To</span>
+										<div class="send-list">
+											<span class="mail">
+												<img src="./assets/img/firstlady.jpg" class="img-circle img-responsive">
+												<span class="name">Abigail</span>
+												<span class="font-gray-small division"> - RM | EMEA</span>
+												<span class="close">x</span>
+												<span></span>
+											</span>
+											<span class="mail">
+												<img src="./assets/img/firstlady.jpg" class="img-circle img-responsive">
+												<span class="">Barabar</span>
+												<span class="font-gray-small"> - RM | EMEA</span>
+												<span class="close">x</span>
+											</span>
+										</div>
+										<span>Message</span>
+										<div class="message">
+											<textarea></textarea>
+										</div>
+									</div>
+									<div class="footer-button">
+										<button type="button" class="pull-right btn btn-primary ">Send</button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<script src="assets/js/jquery-3.1.1.min.js"></script>
-						<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-						<script src="assets/js/bootstrap.min.js"></script>
-						<script src="assets/js/main.js"></script>
-						<script src="assets/js/jquery.dataTables.min.js"></script>
-					</body>
-				</html>
+					</div>
+				</div>
+			</div>
+			<template class="custom-row">
+			<tr>
+				<td>Custom Field <span class="count">1</span></td>
+				<td>
+					<span class="sign"></span>
+					<input type="text" name="" maxlength="5" value="" class="input-sm form-control ">
+					<input type="text" name="" maxlength="5" value="" class="input-sm form-control pull-right">
+				</td>
+				<td>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</td>
+				<td></td>
+				<td>
+					<span class="glyphicon glyphicon-minus remove-row pull-right">
+					</span>
+				</td>
+			</tr>
+			</template>
+			<template class="mail-template">
+			<span class="mail">
+				<img src="./assets/img/firstlady.jpg" class="img-circle img-responsive">
+				<span class="name">Abigail</span>
+				<span class="font-gray-small division"> - RM | EMEA</span>
+				<span class="close">x</span>
+				<span></span>
+			</span>
+			</template>
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+			<script src="assets/js/jquery.dataTables.min.js"></script>
+			<script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
+			<script src="assets/js/bootstrap-multiselect.js"></script>
+			<script src="assets/js/main.js"></script>
+		</body>
+	</html>
