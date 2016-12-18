@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-multiselect.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" />
     
@@ -22,18 +21,18 @@
           <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
         </div>
         <ul class="nav navbar-nav">
-          <li><a href="#products">Products</a></li>
-          <li><a href="#">Tasks</a></li>
-          <li><a href="#">Scenarios</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+          <li><a href="scenarios.html">Scenarios</a></li>
           <li><a href="#">Dashboard</a></li>
         </ul>
         <div class="header-rightSection">
-                      <span class=" header-icons" aria-hidden="true">
-                        <i class="fa fa-bell-o" aria-hidden="true"></i>
-                    </span>
+          <span class=" header-icons" aria-hidden="true">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+          </span>
           <a  href="#" rel="logoutPopover" data-popover-content="#userLogoutPopover" data-placement="bottom"><span class="header-icons" aria-hidden="true">
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    </span></a>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </span></a>
           <!-- logout popover ..... -->
           <div id="userLogoutPopover" class="hide">
             <div>
@@ -201,7 +200,8 @@
                 <label class="col-sm-12 control-label"
                 for="MarketFunction" >Market Function</label>
                 <div class="col-sm-12">
-                  <select id="MarketFunction" class="form-control">
+                  <select id="MarketFunction" class="form-control" >
+                    <option value="" disabled selected>Select from list</option>
                     <option></option>
                     <option></option>
                     <option></option>
@@ -213,6 +213,7 @@
                 for="MarketGroup" >Market Group</label>
                 <div class="col-sm-12">
                   <select id="MarketGroup" class="form-control" >
+                    <option value="" disabled selected>Select from list</option>
                     <option></option>
                     <option></option>
                     <option></option>
@@ -224,15 +225,18 @@
                 for="ExistingProduct" >Select Features from Existing Product</label>
                 <div class="col-sm-12">
                   <select id="ExistingProduct" class="form-control">
+                    <option value="" disabled selected>Enter or Select from list</option>
                     <option></option>
                     <option></option>
                     <option></option>
                   </select>
                 </div>
               </div>
+              <label class="col-sm-12 control-label"
+              for="ExistingProduct" >Select Segment</label>
               <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn active">Global</button>
-                <select id="example-getting-started" multiple="multiple" data-title="Region">
+                <select multiple="multiple" data-title="Region">
                   <option>Region 1</option>
                   <option>Region 2</option>
                   <option>Region 3</option>
@@ -240,7 +244,7 @@
                   <option>Region 5</option>
                   <option>Region 6</option>
                 </select>
-                <select id="example-getting-started" multiple="multiple" data-title="Country">
+                <select  multiple="multiple" data-title="Country">
                   <option value="Cheese">Cheese</option>
                   <option value="Tomatoes">Tomatoes</option>
                   <option value="Mozzarella">Mozzarella</option>

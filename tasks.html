@@ -6,7 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
@@ -21,213 +21,209 @@
                     <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#">Tasks</a></li>
-                    <li><a href="#">Scenarios</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="scenarios.html">Scenarios</a></li>
                     <li><a href="#">Dashboard</a></li>
                 </ul>
                 <div class="header-rightSection">
-                   <span class=" header-icons" aria-hidden="true">
+                    <span class=" header-icons" aria-hidden="true">
                         <i class="fa fa-bell-o" aria-hidden="true"></i>
                     </span>
                     <a  href="#" rel="logoutPopover" data-popover-content="#userLogoutPopover" data-placement="bottom"><span class="header-icons" aria-hidden="true">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
                     </span></a>
                     <!-- logout popover ..... -->
-                     <div id="userLogoutPopover" class="hide">
-                      <div>
-                        <div class="actionPopover">Profile</div>
-                        <div class="actionPopover">Logout</div>
-                      </div>
+                    <div id="userLogoutPopover" class="hide">
+                        <div>
+                            <div class="actionPopover">Profile</div>
+                            <div class="actionPopover">Logout</div>
+                        </div>
                     </div>
-                     <!-- logout popover ..... -->
+                    <!-- logout popover ..... -->
                 </div>
             </div>
         </nav>
-
-
-  <div class="tasks-page" id="tasks">
-    <div class="tasks-header col-lg-12">
-      <div class="tasks-title col-lg-2">Tasks</div>
-      <div class="total-tasks col-lg-2"> 
-        <div class="tasks-count">54</div>
-        <div class="count-title">Total Tasks</div>
-      </div>
-      <div class="open-tasks col-lg-2">
-        <div class="tasks-count">22</div>
-        <div class="count-title">Total Open Tasks</div>
-      </div>
-      <div class="close-tasks col-lg-2">
-        <div class="tasks-count">32</div>
-        <div class="count-title">Total Forwarded Tasks</div>
-      </div>
-      <div class="close-tasks col-lg-2">
-        <div class="tasks-count">32</div>
-        <div class="count-title">Total Closed Tasks</div>
-      </div>
-    </div>
-    <!-- popover -->
-    <div id="myPopover" class="hide">
-  <div>
-    <span>Edit</span><br>
-    <span>Delete</span>
-  </div>
-</div>
-<div id="taskimagePopover" class="hide">
-  <div>
-    <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
-    <p class="actionPopover"> Not the right set of<br>
-        competitors. Revised<br>
-        and updated with n…<br>
-        <span style="color:#0096d6"> View in detail</span></p>
-  </div>
-</div>
- <!-- popover end -->
-    <table id="tasksTable" class="table tasks-table " cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Sl.No</th>
-                <th>Date</th>
-                <th>Requested By</th>
-                <th>Product Name</th>
-                <th>Product Type</th>
-                <th>Forwarded To</th>
-                 <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Sep 22,2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td></td>
-                 <td>Open</td>
-            </tr>
-             <tr>
-                <td>2</td>
-                <td>Mar 22,2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td></td>
-                <td>Open</td>
-            </tr>
-             <tr>
-                <td>3</td>
-                <td>Jun 22,2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                <td>New Product</td>
-                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                <td>Forwarded</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Oct 9, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td></td>
-                <td>Closed</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Nov 14, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                <td>New Product</td>
-                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image5.jpg"></span></div></td>
-                 <td>Forwarded</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Oct 9, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                 <td>Open</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Oct 17, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
-                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                <td>New Product</td>
-                <td></td>
-                 <td>Closed</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Mar 9, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                <td>New Product</td>
-                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span></div></td>
-                 <td>Forwarded</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Dec 19, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                <td>New Product</td>
-                <td></td>
-                <td>Open</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>07/12/2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td></td>
-                 <td>Open</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>Dec 7, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                <td>New Product</td>
-                <td></td>
-                 <td>Open</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>Apr 9, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"> <img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
-                 <td>Open</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>Jan 4, 2016</td>
-                <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                <td>New Product</td>
-                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                <td>Open</td>
-            </tr>
-
-        </tbody>
-    </table>
-  </div>
-  <footer>
-
-    <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
-    <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
-</footer>
-        <script src="assets/js/jquery-3.1.1.min.js"></script>
-        <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
-        <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
-        <script src="assets/js/bootstrap-multiselect.js"></script>
-        <script src="assets/js/main.js"></script>
+        <div class="tasks-page" id="tasks">
+            <div class="tasks-header col-lg-12">
+                <div class="tasks-title col-lg-2">Tasks</div>
+                <div class="total-tasks col-lg-2">
+                    <div class="tasks-count">54</div>
+                    <div class="count-title">Total Tasks</div>
+                </div>
+                <div class="open-tasks col-lg-2">
+                    <div class="tasks-count">22</div>
+                    <div class="count-title">Total Open Tasks</div>
+                </div>
+                <div class="close-tasks col-lg-2">
+                    <div class="tasks-count">32</div>
+                    <div class="count-title">Total Forwarded Tasks</div>
+                </div>
+                <div class="close-tasks col-lg-2">
+                    <div class="tasks-count">32</div>
+                    <div class="count-title">Total Closed Tasks</div>
+                </div>
+            </div>
+            <!-- popover -->
+            <div id="myPopover" class="hide">
+                <div>
+                    <span>Edit</span><br>
+                    <span>Delete</span>
+                </div>
+            </div>
+            <div id="taskimagePopover" class="hide">
+                <div>
+                    <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
+                    <p class="actionPopover"> Not the right set of<br>
+                        competitors. Revised<br>
+                        and updated with n…<br>
+                        <span style="color:#0096d6"> View in detail</span></p>
+                    </div>
+                </div>
+                <!-- popover end -->
+                <table id="tasksTable" class="table tasks-table " cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Sl.No</th>
+                            <th>Date</th>
+                            <th>Requested By <span class="fa fa-filter filter-icon" aria-hidden="true"></span></th>
+                            <th>Product Name</th>
+                            <th>Product Type</th>
+                            <th>Forwarded To</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sep 22,2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mar 22,2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Jun 22,2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                            <td>New Product</td>
+                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                            <td>Forwarded</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Oct 9, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Nov 14, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                            <td>New Product</td>
+                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image5.jpg"></span></div></td>
+                            <td>Forwarded</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Oct 9, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Oct 17, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
+                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Mar 9, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                            <td>New Product</td>
+                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span></div></td>
+                            <td>Forwarded</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Dec 19, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>07/12/2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Dec 7, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                            <td>New Product</td>
+                            <td></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Apr 9, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"> <img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Jan 4, 2016</td>
+                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                            <td>New Product</td>
+                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                            <td>Open</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <footer>
+                <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+                <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+            </footer>
+            <script src="assets/js/jquery-3.1.1.min.js"></script>
+            <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+            <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
+            <script src="assets/js/bootstrap-multiselect.js"></script>
+            <script src="assets/js/main.js"></script>
         </body>
     </html>

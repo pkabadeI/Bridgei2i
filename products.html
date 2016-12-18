@@ -6,12 +6,11 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <link rel="stylesheet" href="assets/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" />
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
@@ -21,9 +20,9 @@
                     <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#">Tasks</a></li>
-                    <li><a href="#">Scenarios</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="scenarios.html">Scenarios</a></li>
                     <li><a href="#">Dashboard</a></li>
                 </ul>
                 <div class="header-rightSection">
@@ -63,7 +62,7 @@
             <!-- popover -->
             <div id="productActionPopover" class="hide">
                 <div>
-                    <div class="actionPopover"><a href="edit-product.html">Edit</a></div>
+                    <div class="actionPopover"><span class="product-modal edit-product" >Edit</span></div>
                     <div class="actionPopover">Delete</div>
                 </div>
             </div>
@@ -113,7 +112,7 @@
                         <th>Sl.No</th>
                         <th>Created Date</th>
                         <th>Product Name</th>
-                        <th>Status</th>
+                        <th>Status <span class="fa fa-filter filter-icon" aria-hidden="true"></span></th>
                         <th>Product Type</th>
                         <th>Reviewers</th>
                         <th>Actions</th>
@@ -123,198 +122,221 @@
                     <tr>
                         <td>1</td>
                         <td>Sep 22,2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                        <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
                         <td>Open</td>
                         <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image3.jpg"></span></a></div></td>
+                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image3.jpg"></span></a></div></td>
                         <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Mar 22,2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                        <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
                         <td>Open</td>
                         <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverPending" data-placement="bottom"><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></a>
-                        </div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Jun 22,2016</td>
-                        <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverPending" data-placement="bottom"><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></a></div></td>
-                        <td><a  class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Oct 9, 2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Nov 14, 2016</td>
-                        <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Oct 9, 2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Oct 17, 2016</td>
-                        <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Mar 9, 2016</td>
-                        <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Dec 19, 2016</td>
-                        <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"></div><div class="pull-right"></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>07/12/2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"></div><div class="pull-right"></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Dec 7, 2016</td>
-                        <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"></div><div class="pull-right"></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Apr 9, 2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-left"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Jan 4, 2016</td>
-                        <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                        <td>Open</td>
-                        <td>New Product</td>
-                        <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- ............new product modal ................... -->
-        <div class="modal fade" id="NewProductModal" tabindex="-1" role="dialog" aria-labelledby="NewProductModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header add-modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="NewProductModalLabel">Add New Product</h4>
-                    </div>
-                    <div class="modal-body">
-                        
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label  class="col-sm-12 control-label"
-                                for="ProductName">Product Name / Unique SKU Name</label>
-                                <div class="col-sm-12">
-                                    <input type="text" class="form-control"
-                                    id="ProductName" placeholder="Enter product name"/>
-                                </div>
+                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverPending" data-placement="bottom"><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></a>
+                    </div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Jun 22,2016</td>
+                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverPending" data-placement="bottom"><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></a></div></td>
+                    <td><a  class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Oct 9, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Nov 14, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Oct 9, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Oct 17, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Mar 9, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Dec 19, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"></div><div class="pull-right"></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>07/12/2016</td>
+                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"></div><div class="pull-right"></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Dec 7, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"></div><div class="pull-right"></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Apr 9, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Jan 4, 2016</td>
+                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                    <td>Open</td>
+                    <td>New Product</td>
+                    <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ............new product modal ................... -->
+    <div class="modal fade" id="NewProductModal" tabindex="-1" role="dialog" aria-labelledby="NewProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header add-modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="NewProductModalLabel">Add New Product</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" action="">
+                        <div class="form-group">
+                            <label  class="col-sm-12 control-label"
+                            for="ProductName">Product Name / Unique SKU Name</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control"
+                                id="ProductName" placeholder="Enter product name"/>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label"
-                                for="MarketFunction" >Market Function</label>
-                                <div class="col-sm-12">
-                                    <select id="MarketFunction" class="form-control">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label"
+                            for="MarketFunction" >Market Function</label>
+                            <div class="col-sm-12">
+                                <select id="MarketFunction" class="form-control">
+                                    <option value="" disabled selected>Select from list</option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label"
-                                for="MarketGroup" >Market Group</label>
-                                <div class="col-sm-12">
-                                    <select id="MarketGroup" class="form-control" >
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label"
+                            for="MarketGroup" >Market Group</label>
+                            <div class="col-sm-12">
+                                <select id="MarketGroup" class="form-control" >
+                                    <option value="" disabled selected>Select from list</option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label"
-                                for="ExistingProduct" >Select Features from Existing Product</label>
-                                <div class="col-sm-12">
-                                    <select id="ExistingProduct" class="form-control">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label"
+                            for="ExistingProduct" >Select Features from Existing Product</label>
+                            <div class="col-sm-12">
+                                <select id="ExistingProduct" class="form-control">
+                                    <option value="" disabled selected>Enter or Select from list</option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
                             </div>
-                            
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">SAVE AND CONTINUE</button>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label"
+                            for="ExistingProduct" >Select Segment</label>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn active">Global</button>
+                                <select  multiple="multiple" class="region" data-title="Region">
+                                    <option>Asia Pacific</option>
+                                    <option>EMEA</option>
+                                    <option>APJ</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                </select>
+                                <select multiple="multiple" class="country" data-title="Country">
+                                    <option>India</option>
+                                    <option>Malyasia</option>
+                                    <option>Russia</option>
+                                    <option>Singapore</option>
+                                    <option>Sri Lanka</option>
+                                    <option>USA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary view-continue-product"  >SAVE AND CONTINUE</a>
                 </div>
             </div>
         </div>
-        <!-- ............new product modal ................... -->
-        <footer>
-            <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
-            <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
-        </footer>
-        <script src="assets/js/jquery-3.1.1.min.js"></script>
-        <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
-        <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
-        <script src="assets/js/bootstrap-multiselect.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+    </div>
+    <!-- ............new product modal ................... -->
+    <footer>
+        <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+        <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+    </footer>
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+    <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
+    <script src="assets/js/bootstrap-multiselect.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
