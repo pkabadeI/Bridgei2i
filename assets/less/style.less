@@ -1,3 +1,4 @@
+/*fonts starts*/
 @path-fonts: '../fonts';
 
 @font-face {
@@ -22,6 +23,18 @@
 	font-weight: normal;
 	src: local('Segoe UI'), local('SegoeUI');
 }
+
+/*fonts ends*/
+
+/*common and defaults components starts*/
+//   @media screen and (max-width:1280px), screen and (max-height:768px) {
+	// body {
+		//      min-height: 768px;
+		//     overflow: hidden;
+		//
+	//}
+	//
+//}
 body {
 	min-width: 1280px;
 	height: 100%;
@@ -149,7 +162,9 @@ footer {
 	display: inline-block;
 }
 
-/* General Css*/
+/*common and defaults components starts*/
+
+/*Page related Css*/
 .header-menu {
 	background-color: #0096D6;
 	margin-bottom: 0;
@@ -170,10 +185,8 @@ footer {
 		border-radius: 50%;
 	}
 }
-.logo-image {
-	border-radius: 20px;
-}
-.container-fluid .navbar-brand {
+.container-fluid 
+.navbar-brand {
 	margin-left: 0 !important;
 }
 .navbar-brand, .navbar-nav > li > a {
@@ -188,19 +201,7 @@ footer {
 .header-rightSection {
 	float: right;
 	padding: 10px 0 5px 10px;
-}
-#userLogoutPopover {
-	.actionPopover {
-		border-bottom: 1px solid #ccc;
-		padding: 10px;
-		cursor: pointer;
-	}
-	.actionPopover:last-child {
-		border-bottom: none;
-	}
-	.actionPopover:hover {
-		background-color: #EFF0F1;
-	}
+	cursor: pointer;
 }
 .header-icons {
 	font-size: 24px;
@@ -257,124 +258,6 @@ footer {
 .page-footer {
 	border-top: 1px solid #ccc;
 	padding: 10px;
-}
-.profile-image {
-	padding-left: 20px;
-	margin-top: 30px;
-}
-.update-image {
-	color: #30a5dc;
-	font-size: 12px;
-	text-align: center;
-	margin-top: 10px;
-}
-.image-profile {
-	height: 180px;
-	width: 170px;
-	border-radius: 50%;
-}
-.email-field {
-	color: #30a5dc;
-}
-.footer-button {
-	float: right;
-}
-.products-title {
-	font-size: 30px;
-}
-.products-count {
-	color: #ccc;
-	text-align: center;
-	font-size: 22px;
-}
-.count-title {
-	color: #ccc;
-	text-align: center;
-	font-size: 15px;
-}
-.text-overflow {
-	/////
-	max-width: 100%;
-	overflow: hidden;
-	width: inherit;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-width: 100%;
-	display: block;
-	width: initial;
-}
-
-/*General css ends */
-
-/*input Placeholder changes starts*/
-.login-box {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	margin: auto;
-
-	>div {
-		position: absolute;
-		top: 30%;
-		bottom: 0;
-		right: 0;
-		left: 0;
-	}
-	.panel-default {
-		margin: auto;
-		max-width: 500px;
-		border-color: #767676;
-
-		input.form-control {
-			border: none;
-			box-shadow: none;
-			border-bottom: 1px solid #328bc8;
-			border-radius: 0;
-			padding-left: 0;
-			padding-bottom: 15px;
-
-			&:focus {
-				box-shadow: none;
-			}
-		}
-		span {
-			font-weight: normal;
-			font-family: "Roboto-Medium";
-			padding-left: 5px;
-			padding-bottom: 10px;
-		}
-		.msg {
-			margin-bottom: 15px;
-			display: block;
-		}
-		.panel-title {
-			color: white;
-		}
-		.panel-heading {
-			background-color: #767676;
-			border-color: #767676;
-		}
-		.panel-footer {
-			border-color: #767676;
-			background-color: transparent;
-
-			span {
-				margin-top: 2%;
-				display: inline-block;
-				padding-bottom: 0;
-			}
-		}
-		.panel-default, .panel-body {
-			border-color: #767676;
-		}
-	}
-	& + footer {
-		position: absolute;
-	}
 }
 .font-gray-small {
 	font-size: 12px;
@@ -455,6 +338,128 @@ footer {
 		display: inline-block;
 	}
 }
+.profile-image {
+	padding-left: 20px;
+	margin-top: 30px;
+}
+.update-image {
+	color: #30a5dc;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+}
+.image-profile {
+	height: 180px;
+	width: 170px;
+	border-radius: 50%;
+}
+.email-field {
+	color: #30a5dc;
+}
+.footer-button {
+	float: right;
+}
+.products-title {
+	font-size: 30px;
+}
+.products-count {
+	color: #ccc;
+	text-align: center;
+	font-size: 22px;
+}
+.count-title {
+	color: #ccc;
+	text-align: center;
+	font-size: 15px;
+}
+.text-overflow {
+	max-width: 100%;
+	overflow: hidden;
+	width: inherit;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+	display: block;
+	width: initial;
+}
+
+/*General css ends */
+
+/*Login page css starts*/
+
+.login-box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+
+	>div {
+		position: absolute;
+		top: 30%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	.panel-default {
+		margin: auto;
+		max-width: 500px;
+		border-color: #767676;
+
+		input.form-control {
+			border: none;
+			box-shadow: none;
+			border-bottom: 1px solid #328bc8;
+			border-radius: 0;
+			padding-left: 0;
+			padding-bottom: 15px;
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		span {
+			font-weight: normal;
+			font-family: "Roboto-Medium";
+			padding-left: 5px;
+			padding-bottom: 10px;
+		}
+		.msg {
+			margin-bottom: 15px;
+			display: block;
+		}
+		.panel-title {
+			color: white;
+		}
+		.panel-heading {
+			background-color: #767676;
+			border-color: #767676;
+		}
+		.panel-footer {
+			border-color: #767676;
+			background-color: transparent;
+
+			span {
+				margin-top: 2%;
+				display: inline-block;
+				padding-bottom: 0;
+			}
+		}
+		.panel-default, .panel-body {
+			border-color: #767676;
+		}
+	}
+	& + footer {
+		position: absolute;
+	}
+}
+
+/*Login page css ends*/
+
+/*Products page*/
 table#product-detail {
 	border-collapse: separate;
 	table-layout: fixed;
@@ -647,13 +652,10 @@ table#product-detail {
 		text-align: center;
 	}
 }
-.view-edit-toggle input {
-	width: 50%;
-}
-.toggle-edit-link {
-	font-size: 15px;
-	vertical-align: middle;
-}
+
+/*Products page*/
+
+/*common css */
 .glyphicon-minus {
 	top: 0;
 	display: block;
@@ -906,9 +908,10 @@ table#product-detail {
 		}
 	}
 }
-/////////////////////////////
 
-/*..............products page css starts .............. */
+/*common css */
+
+/*..............products list page css starts .............. */
 #productTable {
 	&.dataTable {
 		thead .sorting::after, thead .sorting_asc::after {
@@ -934,7 +937,12 @@ table#product-detail {
 		}
 	}
 }
-.action-popover {
+
+/*..............products list page css ends .............. */
+
+/*..............all popover css starts .............. */
+
+tbody + .popover {
 	left: initial !important;
 	right: 20px;
 
@@ -971,7 +979,7 @@ table#product-detail {
 		width: 200px;
 	}
 }
-.img-popover {
+.img-popover + .popover {
 	.arrow {
 		left: 81% !important;
 	}
@@ -979,8 +987,25 @@ table#product-detail {
 		width: 175px;
 	}
 }
-.logout-popover {
+nav .popover .popover-content {
 	width: 200px;
+}
+a[rel="allreviewerspopover"]{
+	display: inline-block;
+}
+#userLogoutPopover {
+
+	.actionPopover {
+		border-bottom: 1px solid #ccc;
+		padding: 10px;
+		cursor: pointer;
+	}
+	.actionPopover:last-child {
+		border-bottom: none;
+	}
+	.actionPopover:hover {
+		background-color: #EFF0F1;
+	}
 }
 #imagePopoverRejected, #imagePopoverApproved, #imagePopoverPending, .singlereviewer, #taskimagePopover {
 	.actionPopover {
@@ -991,15 +1016,17 @@ table#product-detail {
 		width: 100%;
 		font-size: 14px;
 		font-family: "Roboto-Bold";
-		a{
-			    margin: 15px 0;
-    display: block;
-    span{
-    	    display: inline;
-    border: 1px solid;
-    border-radius: 50%;
-    padding: 3px;
-    }
+
+		a {
+			margin: 15px 0;
+			display: block;
+
+			span {
+				display: inline;
+				border: 1px solid;
+				border-radius: 50%;
+				padding: 3px;
+			}
 		}
 		&:nth-child(3) {
 			font-family: "Roboto";
@@ -1150,6 +1177,28 @@ table#product-detail {
 		}
 	}
 }
+#StatusFilter .actionPopover  .dropdown-menu, #RequestedByFilter .actionPopover  .dropdown-menu {
+	display: block;
+	left: -80px;
+	top: -3px;
+
+	& > .active > a {
+		&, &:hover, &:active, &:focus {
+			background-color: #EFF0F1;
+			color: #333;
+		}
+	}
+}
+.add-modal-header {
+	padding: 8px 8px 8px 20px;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #ccc;
+}
+.modal-body .form-horizontal .control-label {
+	text-align: left;
+}
+
+/*..............all popover css ends .............. */
 .products-page {
 	.table-panel-action {
 		margin-top: 4px;
@@ -1211,26 +1260,6 @@ table#product-detail {
 			color: #ccc;
 		}
 	}
-}
-#StatusFilter .actionPopover  .dropdown-menu, #RequestedByFilter .actionPopover  .dropdown-menu {
-	display: block;
-	left: -80px;
-	top: -3px;
-
-	& > .active > a {
-		&, &:hover, &:active, &:focus {
-			background-color: #EFF0F1;
-			color: #333;
-		}
-	}
-}
-.add-modal-header {
-	padding: 8px 8px 8px 20px;
-	border-bottom: 1px solid #e5e5e5;
-	background-color: #ccc;
-}
-.modal-body .form-horizontal .control-label {
-	text-align: left;
 }
 
 /* ..............products page css ends .............. */
@@ -1665,15 +1694,15 @@ li.active {
 		right: 16px;
 	}
 }
-#tasklargePopover{
-	.modal-lg.modal-content{
+#tasklargePopover {
+	.modal-lg.modal-content {
 		height: 460px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    left: 65px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		left: 65px;
 	}
-	.approvedImage,.rejectedImage{
-		margin : 0 6px 10px;
+	.approvedImage, .rejectedImage {
+		margin: 0 6px 10px;
 	}
 }
 #taskPopover, #tasklargePopover {
@@ -1964,6 +1993,7 @@ li.active {
 		margin: auto;
 		vertical-align: middle;
 		height: 40px;
+		cursor: pointer;
 	}
 }
 .dataTables_wrapper {
@@ -2066,9 +2096,10 @@ li.active {
 				border: 1px solid #ccc;
 				border-radius: 50%;
 				padding: 0.1px;
-				//background: url("../img/user-profile.png")  0 0 no-repeat;
-				//background-size: 30px 30px;
-				//background-color: #0096D6;
+				top: 0;
+				margin-top: 0;
+				padding-top: 0;
+				vertical-align: top;
 				width: 30px;
 				height: 30px;
 
@@ -2133,7 +2164,7 @@ li.active {
 		height: 35px;
 	}
 }
-.popover-element {
+.element {
 	display: block;
 	float: left;
 	height: 32px;
@@ -2220,17 +2251,19 @@ div.dataTables_wrapper {
 	min-width: 1000px;
 	margin: 0 auto;
 }
-.view-product-details .table-container .dataTables_filter {
-	display: none;
-}
-.view-product-details  #product-details_wrapper table {
-	table-layout: auto;
-	//border-collapse: collapse !important;
+.view-product-details {
+	.table-container .dataTables_filter {
+		display: none;
+	}
+	&  #product-details_wrapper table {
+		table-layout: auto;
+		//border-collapse: collapse !important;
 
-	td, th {
-		width: 300px;
-		max-width: 300px;
-		min-width: 300px;
+		td, th {
+			width: 300px;
+			max-width: 300px;
+			min-width: 300px;
+		}
 	}
 }
 .DTFC_LeftBodyWrapper {
@@ -2433,22 +2466,6 @@ div.dataTables_wrapper {
 	width: 15px;
 	display: inline-block;
 }
-
-span.arrow-bottom
-{
-	display: block;
-	width: 10px;
-	height: 10px;
-:before{
-	    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -8px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid #000000;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
-}
+.addImage {
+	cursor: pointer;
 }
