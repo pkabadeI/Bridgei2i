@@ -1,4 +1,7 @@
+
 $(document).ready(function() {
+var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1','Amsterdam2','Amsterdam3','Amsterdam4','Amsterdam5','Amsterdam6','Amsterdam7','Amsterdam8','Amsterdam9','Amsterdam10','Amsterdam11','Amsterdam12','Amsterdam13','Amsterdam14','Amsterdam15','Amsterdam16','Amsterdam17','Amsterdam18','Amsterdam19','Amsterdam20','Amsterdam21','Amsterdam22','Amsterdam23','Amsterdam24','Amsterdam25'];
+    $("#existingProductList").typeahead({ source:data, showHintOnFocus: "all"});
 
     $('[rel="imgPopover"]').popover({
             trigger: "manual",
@@ -84,9 +87,9 @@ $(document).ready(function() {
             }, 100);
         });
 
-    $('[rel="allreviewerspopover"]')
+    $(document).find('[rel="allreviewerspopover"]')
         .popover({
-            container: $('#productTable'),
+            container: $('this'),
             trigger: 'manual',
             html: true,
             content: function() {
@@ -106,10 +109,10 @@ $(document).ready(function() {
             }, 300);
         });
 
-    $(document).on("click", "[rel='allreviewerspopover']", function(e) {
-        e.preventDefault();
-        $('.popover').addClass('allreviewers-popover');
-    })
+    //$(document).on("click", "[rel='allreviewerspopover']", function(e) {
+      //  e.preventDefault();
+       // $('.popover').addClass('allreviewers-popover').show();
+    //})
 
     $('[rel="task-popover"]').popover({
         container: 'body',
@@ -122,6 +125,7 @@ $(document).ready(function() {
     })
     .on("mouseenter", function() {
         var _this = this;
+        $('.popover').hide();
         $(this).popover("show").addClass('task-popover');
     }).on("mouseleave", function() {
         var _this = this;
@@ -133,7 +137,7 @@ $(document).ready(function() {
     });
  
     $('a[rel="imagePopover"]').popover({
-        container: 'body',
+        container: $(this),
         trigger: "click",
         html: true,
         content: function() {
@@ -196,12 +200,17 @@ $(document).ready(function() {
                 $(this).popover('hide');
             }
         });
-        $('[rel="scenariosActionPopover"]').each(function() {
+         $('[rel="actionPopover"]').each(function() {
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
             }
         });
-         $('[rel="actionPopover"]').each(function() {
+          $('[rel="task-popover"]').each(function() {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+          $('[rel="scenariosActionPopover"]').each(function() {
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
             }
@@ -217,7 +226,8 @@ $(document).ready(function() {
         $('.popover').css("left", parseInt($(this).offset().left - 125) + "px");
     });
     $('a[rel="task-popover"]').on('shown.bs.popover', function() {
-        $('.popover').css("left", parseInt($(this).offset().left - 220) + "px");
+        $('.popover').css("left", "initial");
+        $('.popover').css("right", "15px");
     });
 
     $('body').on('hover', function(e) {
@@ -251,11 +261,15 @@ $(document).ready(function() {
             var ele = $(".singlereviewer:not(.hidden)");
             if ($(ele).prev(".singlereviewer").length > 0)
                 $(ele).addClass("hidden").prev(".singlereviewer").removeClass("hidden");
-            if ($(".singlereviewer:not(.hidden)").prev(".singlereviewer").length > 0)
-                $(this).attr("disabled", "disabled")
+            if ($(".singlereviewer:not(.hidden)").prev(".singlereviewer").length > 0){
+                $(this).addClass("disabled");
+            }
+            }
             if ($(".singlereviewer:not(.hidden)").next(".singlereviewer").length > 0)
-                $(".glyphicon-triangle-right").attr("disabled", "disabled")
-        }
+                {
+                 $(".glyphicon-triangle-right").addClass("disabled");
+                }
+        
         if ($(this).hasClass("glyphicon-triangle-right")) {
             var ele = $(".singlereviewer:not(.hidden)");
             if ($(ele).next(".singlereviewer").length > 0)
@@ -363,12 +377,6 @@ $(document).ready(function() {
                 else
                     $(this).find('td:nth-child(' + (index + 1) + ')').before("<td><span class='sign'>$</span><span>200</span></td>");
             });
-           // $('#productdetailstable').DataTable().draw();
-
-          //  $.fn.dataTable.tables({
-            //    visible: true,
-            //    api: true
-            //}).columns.adjust().fixedColumns().relayout();
             index++;
         });
         $('#product-detail').css("width", "auto");
@@ -570,20 +578,6 @@ $(document).ready(function() {
     })
 
     /* ............ script for products page start .............. */
-
-
-    // $('.view-product-details').find('#product-details').DataTable({
-    /*scrollY: false,
-        "paging": false,
-        "ordering": false,
-        "info": false,
-       scrollX: "800px",
-        //scrollCollapse: true,
-        paging: false,
-        fixedColumns: {
-            leftColumns: 2,
-        }*/
-    // })
 
     $('.products-page.page-content ').find('#productTable').DataTable({
         "sDom": "<'row products-toolbar table-head'<'col-sm-5'<'table-panel-heading'>><'col-sm-6 pull-right'<'pull-right search'f><'table-panel-action pull-right'>>>" +
@@ -857,7 +851,7 @@ $(document).ready(function() {
     });
     $('[rel="scenariosActionPopover"]').popover({
             container: $("#scenariosTable"),
-            trigger: "hover",
+            trigger: "manual",
             html: true,
             content: function() {
                 var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -866,7 +860,7 @@ $(document).ready(function() {
         })
         .on("mouseenter", function() {
             var _this = this;
-            $(this).popover("show").addClass('action-popover');
+            $(this).popover("show").addClass('senarioaction-popover');
         }).on("mouseleave", function() {
             var _this = this;
             setTimeout(function() {
@@ -1085,9 +1079,9 @@ function hideReviewer() {
             else
                 $(e).find('a:not([rel="allreviewerspopover"]):nth-child(2)').after('<a rel="allreviewerspopover" data-toggle="popover" data-popover-content="#allreviewers" data-placement="bottom" class="popover-element"><span class=count-rest>' + ($(e).find('a.popover-element:not([rel="allreviewerspopover"])').length - 2) + '</span></a>');
 
-            var popOverSettings = {
-                placement: 'bottom',
+  /*          var popOverSettings = {
                 container: $(this),
+                placement: 'bottom',
                 html: true,
                 selector: '[rel="allreviewerspopover"]', //Sepcify the selector here
                 content: function() {
@@ -1095,7 +1089,28 @@ function hideReviewer() {
                 }
             }
             $('body').popover(popOverSettings);
+*/
 
+ $('[rel="allreviewerspopover"]').popover({
+            trigger: "manual",
+            html: true,
+            animation: false,
+            content: function() {
+                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                return clone;
+            }
+        })
+        .on("mouseenter", function() {
+            var _this = this;
+            $(this).popover("show").addClass('allreviewers-popover');
+        }).on("mouseleave", function() {
+            var _this = this;
+            setTimeout(function() {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide");
+                }
+            }, 300);
+        });
             var approved = $(e).find("a[data-popover-content='#imagePopoverApproved'].hidden").length;
             var rejected = $(e).find("a[data-popover-content='#imagePopoverRejected'].hidden").length;
             var hidden = $(e).find("a.hidden").length;

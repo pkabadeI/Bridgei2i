@@ -15,140 +15,142 @@
         <link rel="icon" type="image/png" href="assets/img/favicon.gif">
     </head>
     <body>
-        <nav class="navbar header-menu navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand brand-logo" href="#">
-                        <span></span>
-                    </a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="tasks.html">Tasks</a></li>
-                    <li><a href="scenarios.html">Scenarios</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                </ul>
-                <div class="header-rightSection clearfix">
-                    <span class="alarm header-icons pull-left" aria-hidden="true">
-                        <span class="badge">4</span>
-                    </span>
-                    <a  href="#" rel="logoutPopover" data-toggle="popover" data-popover-content="#userLogoutPopover" data-placement="bottom" class="popover-element">
-                        <span class="header-icons user-profile" aria-hidden="true">
-                        </span>
-                    </a>
-                    <!-- logout popover ..... -->
-                    <div id="userLogoutPopover" class="hide">
-                        <div>
-                            <div class="actionPopover">Profile</div>
-                            <div class="actionPopover">Logout</div>
-                        </div>
+        <div>
+            <nav class="navbar header-menu navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand brand-logo" href="#">
+                            <span></span>
+                        </a>
                     </div>
-                    <!-- logout popover ..... -->
-                    <div id="StatusFilter" class="hide">
-                        <div>
-                            <div class="actionPopover">
-                                <ul class=" dropdown-menu">
-                                    <li>
-                                        <a tabindex="0">
-                                            <label class="checkbox">
-                                                <input type="checkbox" value="Open"> Open
-                                            </label>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="0">
-                                            <label class="checkbox">
-                                                <input type="checkbox" value="Closed"> Closed</label>
+                    <ul class="nav navbar-nav">
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="tasks.html">Tasks</a></li>
+                        <li><a href="scenarios.html">Scenarios</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                    </ul>
+                    <div class="header-rightSection clearfix">
+                        <span class="alarm header-icons pull-left" aria-hidden="true">
+                            <span class="badge">4</span>
+                        </span>
+                        <a  href="#" rel="logoutPopover" data-toggle="popover" data-popover-content="#userLogoutPopover" data-placement="bottom" class="popover-element">
+                            <span class="header-icons user-profile" aria-hidden="true">
+                            </span>
+                        </a>
+                        <!-- logout popover ..... -->
+                        <div id="userLogoutPopover" class="hide">
+                            <div>
+                                <div class="actionPopover">Profile</div>
+                                <div class="actionPopover">Logout</div>
+                            </div>
+                        </div>
+                        <!-- logout popover ..... -->
+                        <div id="StatusFilter" class="hide">
+                            <div>
+                                <div class="actionPopover">
+                                    <ul class=" dropdown-menu">
+                                        <li>
+                                            <a tabindex="0">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" value="Open"> Open
+                                                </label>
                                             </a>
                                         </li>
                                         <li>
                                             <a tabindex="0">
                                                 <label class="checkbox">
-                                                    <input type="checkbox" value="Forwarded"> Forwarded</label>
+                                                    <input type="checkbox" value="Closed"> Closed</label>
                                                 </a>
                                             </li>
-                                            
-                                        </ul>
+                                            <li>
+                                                <a tabindex="0">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="Forwarded"> Forwarded</label>
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="RequestedByFilter" class="hide">
-                                <div>
-                                    <div class="actionPopover">
-                                        <ul class=" dropdown-menu">
-                                            <li>
-                                                <a tabindex="0">
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="Adam Dough"> Adam Dough
-                                                    </label>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a tabindex="0">
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="Joe"> Joe</label>
+                                <div id="RequestedByFilter" class="hide">
+                                    <div>
+                                        <div class="actionPopover">
+                                            <ul class=" dropdown-menu">
+                                                <li>
+                                                    <a tabindex="0">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" value="Adam Dough"> Adam Dough
+                                                        </label>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a tabindex="0">
                                                         <label class="checkbox">
-                                                            <input type="checkbox" value="Adam G">Adam G</label>
+                                                            <input type="checkbox" value="Joe"> Joe</label>
                                                         </a>
                                                     </li>
-                                                    
-                                                </ul>
+                                                    <li>
+                                                        <a tabindex="0">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" value="Adam G">Adam G</label>
+                                                            </a>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div id="imagePopoverRejected" class="hide">
-                                    <div>
-                                        <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
-                                        <div class="actionPopover col-sm-12">
-                                            <div class=" col-sm-4 rejectedImage no-padding glyphicon glyphicon-remove font-gray-small"></div>
-                                            <div class="col-sm-8 no-padding">
-                                                <span class="col-sm-12">Rejected</span>
-                                                <span class="col-sm-12">On Nov 2, 2016</span>
+                                    
+                                    <div id="imagePopoverRejected" class="hide">
+                                        <div>
+                                            <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
+                                            <div class="actionPopover col-sm-12">
+                                                <div class=" col-sm-4 rejectedImage no-padding glyphicon glyphicon-remove font-gray-small"></div>
+                                                <div class="col-sm-8 no-padding">
+                                                    <span class="col-sm-12">Rejected</span>
+                                                    <span class="col-sm-12">On Nov 2, 2016</span>
+                                                </div>
+                                            </div>
+                                            <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n… </div>
+                                        </div>
+                                    </div>
+                                    <div id="imagePopoverApproved" class="hide">
+                                        <div>
+                                            <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
+                                            <div class="actionPopover">
+                                                <span class=" col-sm-3 approvedImage no-padding glyphicon glyphicon-ok font-gray-small"></span>
+                                                <div class="col-sm-9 no-padding"><span class="col-sm-12">Approved</span>
+                                                <span class="col-sm-12">On Nov 2, 2016</span></div>
                                             </div>
                                         </div>
-                                        <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n… </div>
                                     </div>
-                                </div>
-                                <div id="imagePopoverApproved" class="hide">
-                                    <div>
-                                        <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
-                                        <div class="actionPopover">
-                                            <span class=" col-sm-3 approvedImage no-padding glyphicon glyphicon-ok font-gray-small"></span>
-                                            <div class="col-sm-9 no-padding"><span class="col-sm-12">Approved</span>
-                                            <span class="col-sm-12">On Nov 2, 2016</span></div>
+                                    <div id="allreviewers" class="hide">
+                                        <div>
+                                            <span class="allreviewers glyphicon glyphicon-triangle-left"></span>
+                                            <span class="allreviewers glyphicon glyphicon-triangle-right"></span>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="allreviewers" class="hide">
-                                    <div>
-                                        <span class="allreviewers glyphicon glyphicon-triangle-left"></span>
-                                        <span class="allreviewers glyphicon glyphicon-triangle-right"></span>
-                                    </div>
-                                </div>
-                                <div id="imagePopoverPending" class="hide">
-                                    <div>
-                                        <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
-                                        <div class="actionPopover col-sm-12">
-                                            <div class="col-sm-4 pendingImage no-padding"></div>
-                                            <div class="col-sm-8 no-padding">
-                                                <span class="col-sm-12">Pending Review</span>
-                                                <span class="col-sm-12">On Nov 2, 2016</span>
+                                    <div id="imagePopoverPending" class="hide">
+                                        <div>
+                                            <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
+                                            <div class="actionPopover col-sm-12">
+                                                <div class="col-sm-4 pendingImage no-padding"></div>
+                                                <div class="col-sm-8 no-padding">
+                                                    <span class="col-sm-12">Pending Review</span>
+                                                    <span class="col-sm-12">On Nov 2, 2016</span>
+                                                </div>
                                             </div>
+                                            <div class="actionPopover text-center" style="color:#0096d6">SEND REMINDER</div>
                                         </div>
-                                        <div class="actionPopover text-center" style="color:#0096d6">SEND REMINDER</div>
                                     </div>
-                                </div>
-                                <div id="taskimagePopover" class="hide">
-                                    <div>
-                                        <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
-                                        <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n…
-                                            <a href="view-task.html"> View in detail <span class="glyphicon glyphicon-arrow-right"></span></a></p></div>
+                                    <div id="taskimagePopover" class="hide">
+                                        <div>
+                                            <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
+                                            <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n…
+                                                <a href="view-task.html"> View in detail <span class="glyphicon glyphicon-arrow-right"></span></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -485,12 +487,13 @@
                                     <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
                                     <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
                                 </footer>
-                                <script src="assets/js/jquery-3.1.1.min.js"></script>
+                                </div> <script src="assets/js/jquery-3.1.1.min.js"></script>
                                 <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
                                 <script src="assets/js/bootstrap.min.js"></script>
                                 <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
                                 <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
                                 <script src="assets/js/bootstrap-multiselect.js"></script>
+                                <script src="assets/js/bootstrap3-typeahead.min.js"></script>
                                 <script src="assets/js/main.js"></script>
                             </body>
                         </html>
