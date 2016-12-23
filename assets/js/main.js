@@ -828,7 +828,7 @@ $(document).on("click",".search-list ul li",function(){
     /* ............ script for scenarios page start .............. */
 
     $('#scenariosTable').DataTable({
-        "sDom": "<' col-sm-12 scenarios-toolbar table-head'<'col-sm-8'<'table-panel-heading'>><'col-sm-2'<'table-panel-action pull-right'>><'col-sm-2'f>>" +
+        "sDom": "<' col-sm-12 scenarios-toolbar table-head'<'col-sm-6'<'table-panel-heading'>><'col-sm-6 pull-right'<'pull-right search'f><'table-panel-action pull-right'>>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row'<'col-sm-6'i><'col-sm-6'<'pull-right'p><'table-footer pull-right'l>>>",
         "oLanguage": {
@@ -1090,18 +1090,6 @@ function hideReviewer() {
             else
                 $(e).find('a:not([rel="allreviewerspopover"]):nth-child(2)').after('<a rel="allreviewerspopover" data-toggle="popover" data-popover-content="#allreviewers" data-placement="bottom" class="popover-element"><span class=count-rest>' + ($(e).find('a.popover-element:not([rel="allreviewerspopover"])').length - 2) + '</span></a>');
 
-            /*          var popOverSettings = {
-                container: $(this),
-                placement: 'bottom',
-                html: true,
-                selector: '[rel="allreviewerspopover"]', //Sepcify the selector here
-                content: function() {
-                    return $('#allreviewers').html();
-                }
-            }
-            $('body').popover(popOverSettings);
-*/
-
             $('[rel="allreviewerspopover"]').popover({
                     trigger: "manual",
                     html: true,
@@ -1132,7 +1120,7 @@ function hideReviewer() {
         }
     });
     $("#tasksTable").find("td:nth-child(6)").each(function(k, element) {
-        var e = $(this).find("span");
+        var e = $(this);
         if ($(e).find('a:not([rel="allreviewerspopover"])').length > 3) {
             $(e).find('a:not([rel="allreviewerspopover"]):nth-child(n+3)').addClass("hidden");
             if ($(e).find('a[rel="allreviewerspopover"]').length > 0)
@@ -1140,17 +1128,26 @@ function hideReviewer() {
             else
                 $(e).find('a:not([rel="allreviewerspopover"]):nth-child(2)').after('<a rel="allreviewerspopover" data-toggle="popover" data-popover-content="#allreviewers" data-placement="bottom" class="popover-element"><span class=count-rest>' + ($(e).find('a.popover-element:not([rel="allreviewerspopover"])').length - 2) + '</span></a>');
 
-            var popOverSettings = {
-                placement: 'bottom',
-                container: $(this),
-                html: true,
-                selector: '[rel="allreviewerspopover"]', //Sepcify the selector here
-                content: function() {
-                    return $('#allreviewers').html();
-                }
-            }
-            $('body').popover(popOverSettings);
-
+                      $('[rel="allreviewerspopover"]').popover({
+                    trigger: "manual",
+                    html: true,
+                    animation: false,
+                    content: function() {
+                        var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                        return clone;
+                    }
+                })
+                .on("mouseenter", function() {
+                    var _this = this;
+                    $(this).popover("show").addClass('allreviewers-popover');
+                }).on("mouseleave", function() {
+                    var _this = this;
+                    setTimeout(function() {
+                        if (!$(".popover:hover").length) {
+                            $(_this).popover("hide");
+                        }
+                    }, 300);
+                });
             var approved = $(e).find("a[data-popover-content='#imagePopoverApproved'].hidden").length;
             var rejected = $(e).find("a[data-popover-content='#imagePopoverRejected'].hidden").length;
             var hidden = $(e).find("a.hidden").length;

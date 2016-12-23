@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -48,9 +47,9 @@
           </div>
         </div>
       </nav>
-      <div class="scenarios-page" id="scenarios">
-        <div class="scenarios-header col-lg-12">
-          <div class="scenarios-title col-lg-2">Scenarios</div>
+      <div class="scenarios-page page-content" id="scenarios">
+        <div class="scenarios-header page-header col-lg-12">
+          <div class="scenarios-title page-title col-lg-3">Scenarios</div>
           <div class="total-scenarios col-lg-2">
             <div class="scenarios-count">54</div>
             <div class="count-title">Total Scenarios</div>
@@ -69,7 +68,9 @@
           <div>
             <div class="actionPopover">Edit</div>
             <div class="actionPopover">Delete</div>
-            <div class="actionPopover">Launch as Product</div>
+            <div class="actionPopover">
+              <a data-toggle="modal" data-target="#sendForReview" data-placement="top">Launch as Product</a>
+            </a> </div>
           </div>
         </div>
         <!-- popover end -->
@@ -236,110 +237,225 @@
             </tr>
           </tbody>
         </table>
-      </div>
-      <!-- ............. scenario popup modal ................. -->
-      <div class="modal fade" id="NewScenarioModal" tabindex="-1" role="dialog" aria-labelledby="NewScenarioModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header add-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              </button>
-              <h4 class="modal-title" id="NewScenarioModalLabel">Add New Scenario</h4>
-            </div>
-            <div class="modal-body">
-              
-              <form class="form-horizontal" role="form">
-                <div class="form-group">
-                  <label  class="col-sm-12 control-label"
-                  for="ScenarioName">Scenario Name</label>
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control"
-                    id="ScenarioName" placeholder="Enter product name"/>
-                  </div>
-                  <div class=" col-sm-12 scanario-name-tag">New scenario name and product name remain the same </div>
+        <!-- ............. scenario popup modal ................. -->
+        <div class="modal fade" id="NewScenarioModal" tabindex="-1" role="dialog" aria-labelledby="NewProductModalLabel" aria-hidden="true">
+          <div class="vertical-alignment-helper">
+            <div class="modal-dialog  vertical-align-center" role="document">
+              <div class="modal-content">
+                <div class="modal-header add-modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="NewProductModalLabel">Add New Scenario</h4>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-12 control-label"
-                  for="MarketFunction" >Market Function</label>
-                  <div class="col-sm-12">
-                    <select id="MarketFunction" class="form-control" >
-                      <option value="" disabled selected>Select from list</option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                    </select>
-                  </div>
+                <div class="modal-body">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label  class="col-sm-12 control-label"
+                      for="ScenarioName">Scenario Name</label>
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control"
+                        id="ScenarioName" placeholder="Enter product name"/>
+                      </div>
+                      <div class=" col-sm-12 scanario-name-tag">New scenario name and product name remain the same </div>
+                    </div>
+                   <div class="form-group">
+                <label class="col-sm-12 control-label"
+                for="MarketFunction" >Market Function</label>
+                <div class="col-sm-12">
+                  <select id="MarketFunction" class="form-control" >
+                   <option value="" disabled selected>Select from list</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-12 control-label"
-                  for="MarketGroup" >Market Group</label>
-                  <div class="col-sm-12">
-                    <select id="MarketGroup" class="form-control" >
-                      <option value="" disabled selected>Select from list</option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                    </select>
-                  </div>
+              </div>  <div class="form-group">
+                      <label class="col-sm-12 control-label" for="MarketGroup">Market Group</label>
+                      <div class="col-sm-12">
+                        <select id="MarketGroup" class="form-control italic">
+                          <option value="" disabled selected>Select from list</option>
+                          <option></option>
+                          <option></option>
+                          <option></option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-12 control-label" for="ExistingProduct">Select Features from Existing Product</label>
+                      <div class="col-sm-12 autocomplete-textbox">
+                        <input type="text" id="existingProductList" class="form-control" data-provide="typeahead" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-12 control-label" for="ExistingProduct">Select Segment</label>
+                      <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn active">Global</button>
+                        <select multiple="multiple" class="region" data-title="Region">
+                          <option>Asia Pacific</option>
+                          <option>EMEA</option>
+                          <option>APJ</option>
+                          <option>North America</option>
+                          <option>South America</option>
+                        </select>
+                        <select multiple="multiple" class="country" data-title="Country">
+                          <option>India</option>
+                          <option>Malyasia</option>
+                          <option>Russia</option>
+                          <option>Singapore</option>
+                          <option>Sri Lanka</option>
+                          <option>USA</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-12 control-label"
-                  for="ExistingProduct" >Select Features from Existing Product</label>
-                  <div class="col-sm-12">
-                    <select id="ExistingProduct" class="form-control">
-                      <option value="" disabled selected>Enter or Select from list</option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                    </select>
-                  </div>
+                <div class="modal-footer">
+                  <a class="btn btn-primary view-continue-product">SAVE AND CONTINUE</a>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-12 control-label"
-                  for="ExistingProduct" >Select Segment</label>
-                  <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn active">Global</button>
-                    <select multiple="multiple" data-title="Region">
-                      <option>Region 1</option>
-                      <option>Region 2</option>
-                      <option>Region 3</option>
-                      <option>Region 4</option>
-                      <option>Region 5</option>
-                      <option>Region 6</option>
-                    </select>
-                    <select  multiple="multiple" data-title="Country">
-                      <option value="Cheese">Cheese</option>
-                      <option value="Tomatoes">Tomatoes</option>
-                      <option value="Mozzarella">Mozzarella</option>
-                      <option value="Mushrooms">Mushrooms</option>
-                      <option value="Pepperoni">Pepperoni</option>
-                      <option value="Onions">Onions</option>
-                    </select>
-                  </div>
-                </div>
-                
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">SAVE AND CONTINUE</button>
+              </div>
             </div>
           </div>
         </div>
+        <!-- Modal -->
+        <div id="sendForReview" class="modal fade " role="dialog">
+          <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg  vertical-align-center">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Send for Review & Approval</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="row send-box clearfix">
+                    <div class="col-md-6 pull-left">
+                      <div class="btn-group allot-region-country" role="group" aria-label="...">
+                        <button type="button" class="btn active">Global</button>
+                        <select  multiple="multiple" class="region" data-title="Region">
+                          <option>Asia Pacific</option>
+                          <option>EMEA</option>
+                          <option>APJ</option>
+                          <option>North America</option>
+                          <option>South America</option>
+                        </select>
+                        <select multiple="multiple" class="country" data-title="Country">
+                          <option>India</option>
+                          <option>Malyasia</option>
+                          <option>Russia</option>
+                          <option>Singapore</option>
+                          <option>Sri Lanka</option>
+                          <option>USA</option>
+                        </select>
+                      </div>
+                      <div class="custom-search-input">
+                        <div class="input-group col-md-12">
+                          <span class=" glyphicon glyphicon-search"></span>
+                          <input type="search" class="  search-query form-control" placeholder="Search" />
+                        </div>
+                      </div>
+                      <div class="search-list">
+                        <ul>
+                          <li>
+                            <div id="1">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+                              <span class="name">Barbara</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="2">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+                              <span class="name">Josh</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="3">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/image2.jpg" class="img-responsive img-circle">
+                              <span class="name">Abigail</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="4">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/image3.jpg" class="img-responsive img-circle">
+                              <span class="name">Sam</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="5">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/image4.jpg" class="img-responsive img-circle">
+                              <span class="name">Kinley</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="6">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+                              <span class="name">Rose</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div id="7">
+                              <span class="checkbox"><input type="checkbox" name=""></span>
+                              <img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+                              <span class="name">Jimmy</span>
+                              <span class="font-gray-small designation">RM</span>
+                            </div></li>
+                            <li>
+                              <div id="8">
+                                <span class="checkbox"><input type="checkbox" name=""></span>
+                                <img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+                                <span class="name">Tom</span>
+                                <span class="font-gray-small designation">RM</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-6 pull-right">
+                        <div class="top-right">
+                          <span>To</span>
+                          <div class="send-list">
+                          </div>
+                          <span>Message</span>
+                          <div class="message">
+                            <textarea></textarea>
+                          </div>
+                        </div>
+                        <div class="footer-button">
+                          <button type="button" class="pull-right btn btn-primary ">Send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ............. scenario popup modal ................. -->
+        <footer>
+          <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+          <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+        </footer>
       </div>
-      <!-- ............. scenario popup modal ................. -->
-      <footer>
-        <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
-        <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
-      </footer>
-    </div>
-    <script src="assets/js/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
-    <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script><script src="assets/js/main.js"></script>
-    <script src="assets/js/bootstrap3-typeahead.min.js"></script>
-    <script src="assets/js/bootstrap-multiselect.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+      <script src="assets/js/jquery-3.1.1.min.js"></script>
+      <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+      <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script><script src="assets/js/main.js"></script>
+      <script src="assets/js/bootstrap3-typeahead.min.js"></script>
+      <script src="assets/js/bootstrap-multiselect.js"></script>
+      <script src="assets/js/main.js"></script>
+    </body>
+  </html>

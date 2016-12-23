@@ -58,6 +58,7 @@ select {
 }
 .italic {
 	font-style: italic;
+	color:#999;
 }
 .btn {
 	min-width: 120px;
@@ -1338,16 +1339,13 @@ a[rel="allreviewerspopover"] {
 	.actionPopover:last-child {
 		border-bottom: none;
 	}
+	a {
+		color : #333;
+		text-decoration: none;
+	}
 }
 .scenarios-page {
-	margin-top: 20px;
-
 	.scenarios-header {
-		margin-bottom: 20px;
-
-		.scenarios-title {
-			font-size: 45px;
-		}
 		.scenarios-count {
 			color: #95989A;
 			text-align: center;
@@ -1458,8 +1456,9 @@ a[rel="allreviewerspopover"] {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-#tasksTable {
-	td:nth-child(6) {
+.tasks-page  #tasksTable {
+	tr td:nth-child(6) {
+		text-align: right;
 		> div:nth-child(1) 
 		>span:first-child {
 			padding: 0 3px;
@@ -1476,6 +1475,7 @@ a[rel="allreviewerspopover"] {
 	.actionPopover:last-child {
 		border-bottom: none;
 		font-size: 12px;
+		font-family: "Roboto";
 	}
 	a {
 		color: #0096d6;
