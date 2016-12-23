@@ -12,12 +12,15 @@
         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <link rel="stylesheet" href="assets/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/img/favicon.gif">
     </head>
     <body>
         <nav class="navbar header-menu navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
+                    <a class="navbar-brand brand-logo" href="#">
+                        <span></span>
+                    </a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="products.html">Products</a></li>
@@ -25,13 +28,14 @@
                     <li><a href="scenarios.html">Scenarios</a></li>
                     <li><a href="#">Dashboard</a></li>
                 </ul>
-                <div class="header-rightSection">
-                    <span class=" header-icons" aria-hidden="true">
-                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                <div class="header-rightSection clearfix">
+                    <span class="alarm header-icons pull-left" aria-hidden="true">
+                        <span class="badge">4</span>
                     </span>
-                    <a  href="#" rel="logoutPopover" data-popover-content="#userLogoutPopover" data-placement="bottom"><span class="header-icons" aria-hidden="true">
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    </span></a>
+                    <a  href="#" rel="logoutPopover" data-toggle="popover" data-popover-content="#userLogoutPopover" data-placement="bottom" class="popover-element">
+                        <span class="header-icons user-profile" aria-hidden="true">
+                        </span>
+                    </a>
                     <!-- logout popover ..... -->
                     <div id="userLogoutPopover" class="hide">
                         <div>
@@ -44,26 +48,29 @@
             </div>
         </nav>
         <div class="products-page page-content" id="products">
-            <div class="products-header col-lg-12">
-                <div class="products-title col-lg-2">Products</div>
-                <div class="total-products col-lg-2">
-                    <div class="products-count">54</div>
+            <div class="products-header page-header col-sm-12">
+                <div class="products-title page-title col-md-3">Products</div>
+                <div class="total-products col-md-2">
+                    <div class="summary-count">54</div>
                     <div class="count-title">Total Products</div>
                 </div>
-                <div class="open-products col-lg-2">
-                    <div class="products-count">22</div>
+                <div class="open-products col-md-2">
+                    <div class="summary-count">22</div>
                     <div class="count-title">Total Open Products</div>
                 </div>
-                <div class="close-products col-lg-2">
-                    <div class="products-count">32</div>
+                <div class="close-products col-md-2">
+                    <div class="summary-count">32</div>
                     <div class="count-title">Total Closed Products</div>
+                </div>
+                <div class="col-md-3">
                 </div>
             </div>
             <!-- popover -->
             <div id="productActionPopover" class="hide">
                 <div>
-                    <div class="actionPopover"><span class="product-modal edit-product" >Edit</span></div>
+                    <div class="actionPopover product-modal edit-product">Edit</div>
                     <div class="actionPopover">Delete</div>
+                    <div class="actionPopover"><a data-toggle="modal" data-target="#tasklargePopover" data-placement="top">View Comments</a></div>
                 </div>
             </div>
             <div id="imagePopoverRejected" class="hide">
@@ -72,37 +79,47 @@
                     <div class="actionPopover col-sm-12">
                         <div class=" col-sm-4 rejectedImage no-padding glyphicon glyphicon-remove font-gray-small"></div>
                         <div class="col-sm-8 no-padding">
-                            <span>Rejected</span><br>
-                            <span>On Nov 2, 2016</span>
+                            <span class="col-sm-12">Rejected</span>
+                            <span class="col-sm-12">On Nov 2, 2016</span>
                         </div>
                     </div>
-                    <p class="actionPopover"> Not the right set of<br>
-                        competitors. Revised<br>
-                    and updated with n…</p>
+                    <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n… </div>
                 </div>
             </div>
             <div id="imagePopoverApproved" class="hide">
                 <div>
                     <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
                     <div class="actionPopover">
-                        <span class=" col-sm-4 approvedImage no-padding glyphicon glyphicon-ok font-gray-small"></span>
-                        <div class="col-sm-8 no-padding"><span>Approved</span><br>
-                        <span>On Nov 2, 2016</span></div>
+                        <span class=" col-sm-3 approvedImage no-padding glyphicon glyphicon-ok font-gray-small"></span>
+                        <div class="col-sm-9 no-padding"><span class="col-sm-12">Approved</span>
+                        <span class="col-sm-12">On Nov 2, 2016</span></div>
                     </div>
-                    <!--     <div class="actionPopover">On Nov 2, 2016</div> -->
+                </div>
+            </div>
+            <div id="allreviewers" class="hide">
+                <div>
+                    <span class="allreviewers glyphicon glyphicon-triangle-left"></span>
+                    <span class="allreviewers glyphicon glyphicon-triangle-right"></span>
                 </div>
             </div>
             <div id="imagePopoverPending" class="hide">
                 <div>
                     <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
                     <div class="actionPopover col-sm-12">
-                        <div class=" col-sm-4 pendingImage no-padding glyphicon glyphicon-list-alt font-gray-small"></div>
+                        <div class="col-sm-4 pendingImage no-padding"></div>
                         <div class="col-sm-8 no-padding">
-                            <span>Pending Review</span><br>
-                            <span>On Nov 2, 2016</span>
+                            <span class="col-sm-12">Pending Review</span>
+                            <span class="col-sm-12">On Nov 2, 2016</span>
                         </div>
                     </div>
                     <div class="actionPopover text-center" style="color:#0096d6">SEND REMINDER</div>
+                </div>
+            </div>
+            <div id="StatusFilter" class="hide">
+                <div>
+                    <div class="actionPopover">
+                        <ul class=" dropdown-menu"><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Open"> Open</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Closed"> Closed</label></a></li></ul>
+                    </div>
                 </div>
             </div>
             <!-- popover end -->
@@ -112,7 +129,11 @@
                         <th>Sl.No</th>
                         <th>Created Date</th>
                         <th>Product Name</th>
-                        <th>Status <span class="fa fa-filter filter-icon" aria-hidden="true"></span></th>
+                        <th>Status
+                            <a  href="#" rel="filterpopover" class="" data-toggle="popover"  data-popover-content="#StatusFilter" data-placement="bottom">
+                                <span class="fa fa-filter filter-icon" aria-hidden="true"></span>
+                            </a>
+                        </th>
                         <th>Product Type</th>
                         <th>Reviewers</th>
                         <th>Actions</th>
@@ -120,129 +141,497 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
+                        <td data-id="1">1</td>
                         <td>Sep 22,2016</td>
                         <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
                         <td>Open</td>
                         <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image3.jpg"></span></a></div></td>
-                        <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                        <td>
+                            <div class="clearfix">
+                                <span class="pull-right">
+                                    <span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal">
+                                    </span>
+                                </span>
+                                <span class="pull-right">
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage approved">
+                                            <img class="img-responsive img-circle" src="./assets/img/image1.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverPending" data-placement="bottom">
+                                        <span class="roundImage">
+                                            <img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverPending" data-placement="bottom">
+                                        <span class="roundImage">
+                                            <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                        <span class="roundImage rejected">
+                                            <img class="img-responsive img-circle" src="./assets/img/image4.jpg">
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                                <span class=" action-button" aria-hidden="true">
+                                    <span></span><span></span><span></span>
+                                </span>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <td  data-id="2">2</td>
                         <td>Mar 22,2016</td>
                         <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
                         <td>Open</td>
                         <td>New Product</td>
-                        <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverPending" data-placement="bottom"><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></a>
+                        <td>
+                            <div class="clearfix">
+                                <span class="pull-right">
+                                    <span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal" >
+                                    </span>
+                                </span>
+                                <span class="pull-right">
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage approved">
+                                            <img class="img-responsive img-circle" src="./assets/img/image5.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                        <span class="roundImage">
+                                            <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage">
+                                            <img class="img-responsive img-circle" src="./assets/img/image4.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage">
+                                            <img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage">
+                                            <img class="img-responsive img-circle" src="./assets/img/image1.jpg">
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                                <span class=" action-button" aria-hidden="true">
+                                    <span></span><span></span><span></span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  data-id="3">3</td>
+                        <td>Jun 22,2016</td>
+                        <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                        <td>Open</td>
+                        <td>New Product</td>
+                        <td>
+                            <div class="clearfix">
+                                <span class="pull-right">
+                                    <span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal">
+                                    </span>
+                                </span>
+                                <span class="pull-right">
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage approved">
+                                            <img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                        <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image1.jpg">
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                                <span class=" action-button" aria-hidden="true">
+                                    <span></span><span></span><span></span>
+                                    
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  data-id="4">4</td>
+                        <td>Oct 9, 2016</td>
+                        <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                        <td>Open</td>
+                        <td>New Product</td>
+                        <td>
+                            <div class="clearfix">
+                                <span class="pull-right">
+                                    <span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal">
+                                    </span>
+                                </span>
+                                <span class="pull-right">
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                        <span class="roundImage approved">
+                                            <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                        </span>
+                                    </a>
+                                    <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                        <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                                <span class=" action-button" aria-hidden="true">
+                                    <span></span><span></span><span></span>
+                                    
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  data-id="5">5</td>
+                        <td>Nov 14, 2016</td>
+                        <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                        <td>Open</td>
+                        <td>New Product</td>
+                        <td>                    <div class="clearfix">
+                            <span class="pull-right">
+                                <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview"><span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                    
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image4.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image5.jpg">
+                                </span>
+                            </a>
+                        </span>
                     </div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                    <td>
+                        <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                            <span class=" action-button" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                                
+                            </span>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>Jun 22,2016</td>
-                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverPending" data-placement="bottom"><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></a></div></td>
-                    <td><a  class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>4</td>
+                    <td  data-id="6">6</td>
                     <td>Oct 9, 2016</td>
                     <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
                     <td>Open</td>
                     <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><a  href="#" rel="imgPopover" data-popover-content="#imagePopoverApproved" data-placement="bottom"><span class="roundImage"><img class="row-images-approved" src="./assets/img/image2.jpg"></span></a></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+                    <td>
+                        <div class="clearfix">
+                            <span class="pull-right">
+                                <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview">
+                                    <span class="addImage glyphicon glyphicon-plus font-gray-small"></span>
+                                </a>
+                            </span>
+                            <span class="pull-right">
+                                <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                    <span class="roundImage approved">
+                                        <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                    </span>
+                                </a>
+                                <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                    <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                    </span>
+                                </a>
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                            <span class=" action-button" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </span>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>5</td>
-                    <td>Nov 14, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Oct 9, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>7</td>
+                    <td  data-id="7">7</td>
                     <td>Oct 17, 2016</td>
                     <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
                     <td>Open</td>
                     <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><a  href="#"  rel="imgPopover" data-popover-content="#imagePopoverRejected" data-placement="bottom"><span class="roundImage"><img class="row-images-rejected" src="./assets/img/image1.jpg"></span></a><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Mar 9, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Dec 19, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"></div><div class="pull-right"></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>07/12/2016</td>
-                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"></div><div class="pull-right"></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Dec 7, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"></div><div class="pull-right"></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Apr 9, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right"><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Jan 4, 2016</td>
-                    <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
-                    <td>Open</td>
-                    <td>New Product</td>
-                    <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a   data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                    <td><a class="action-column pull-right" href="#" rel="actionPopover" data-popover-content="#productActionPopover" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- ............new product modal ................... -->
-    <div class="modal fade" id="NewProductModal" tabindex="-1" role="dialog" aria-labelledby="NewProductModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+                    <td>
+                        <div class="clearfix">
+                            <span class="pull-right">
+                                <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview"><span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                        <span class=" action-button" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td  data-id="8">8</td>
+                <td>Mar 9, 2016</td>
+                <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                <td>Open</td>
+                <td>New Product</td>
+                <td>
+                    <div class="clearfix">
+                        <span class="pull-right">
+                            <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview">
+                                <span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                        <span class=" action-button" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td  data-id="9">9</td>
+                <td>Dec 19, 2016</td>
+                <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                <td>Open</td>
+                <td>New Product</td>
+                <td>
+                    <div class="clearfix">
+                        <span class="pull-right">
+                            <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview">
+                                <span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                        <span class=" action-button" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Dec 19, 2016</td>
+                <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                <td>Closed</td>
+                <td>New Product</td>
+                <td>
+                    <div class="clearfix approved-all">
+                        <span class="pull-right">
+                            <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview">
+                                <span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                        <span class=" action-button" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Dec 7, 2016</td>
+                <td><a  class="product-modal view-product ">Officejet 5612 Wide Format e-All-in-One</a></td>
+                <td>Open</td>
+                <td>New Product</td>
+                <td>
+                    <div class="clearfix">
+                        <span class="pull-right">
+                            <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview"><span class="addImage glyphicon glyphicon-plus font-gray-small">
+                            </span>
+                        </a>
+                    </span>
+                    <span class="pull-right">
+                        <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                            <span class="roundImage approved">
+                                <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                            </span>
+                        </a>
+                        <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                            <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                            </span>
+                        </a>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                    <span class=" action-button" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </span>
+                </a>
+            </td></tr>
+            <tr>
+                <td>12</td>
+                <td>Apr 9, 2016</td>
+                <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                <td>Open</td>
+                <td>New Product</td>
+                <td>
+                    <div class="clearfix">
+                        <span class="pull-right">
+                            <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview">
+                                <span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                        <span class=" action-button" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Jan 4, 2016</td>
+                <td><a  class="product-modal view-product ">Officejet Pro 276dw Monochrome Printer</a></td>
+                <td>Open</td>
+                <td>New Product</td>
+                <td>
+                    <div class="clearfix">
+                        <span class="pull-right">
+                            <a class="font-gray-small"  data-toggle="modal" data-target="#sendForReview">
+                                <span class="addImage glyphicon glyphicon-plus font-gray-small">
+                                </span>
+                            </a>
+                        </span>
+                        <span class="pull-right">
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                <span class="roundImage approved">
+                                    <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                </span>
+                            </a>
+                            <a  href="#" rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                <span class="roundImage rejected"><img class="img-responsive img-circle" src="./assets/img/firstlady.jpg">
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <a class="action-column pull-right clearfix" href="#" rel="actionPopover" class="popover-element" data-popover-content="#productActionPopover" data-placement="bottom">
+                        <span class=" action-button" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- ............new product modal ................... -->
+<div class="modal fade" id="NewProductModal" tabindex="-1" role="dialog" aria-labelledby="NewProductModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog  vertical-align-center" role="document">
             <div class="modal-content">
                 <div class="modal-header add-modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -264,7 +653,7 @@
                             <label class="col-sm-12 control-label"
                             for="MarketFunction" >Market Function</label>
                             <div class="col-sm-12">
-                                <select id="MarketFunction" class="form-control">
+                                <select id="MarketFunction" class="form-control italic">
                                     <option value="" disabled selected>Select from list</option>
                                     <option></option>
                                     <option></option>
@@ -276,7 +665,7 @@
                             <label class="col-sm-12 control-label"
                             for="MarketGroup" >Market Group</label>
                             <div class="col-sm-12">
-                                <select id="MarketGroup" class="form-control" >
+                                <select id="MarketGroup" class="form-control italic" >
                                     <option value="" disabled selected>Select from list</option>
                                     <option></option>
                                     <option></option>
@@ -288,7 +677,7 @@
                             <label class="col-sm-12 control-label"
                             for="ExistingProduct" >Select Features from Existing Product</label>
                             <div class="col-sm-12">
-                                <select id="ExistingProduct" class="form-control">
+                                <select id="ExistingProduct" class="form-control italic">
                                     <option value="" disabled selected>Enter or Select from list</option>
                                     <option></option>
                                     <option></option>
@@ -326,17 +715,276 @@
             </div>
         </div>
     </div>
-    <!-- ............new product modal ................... -->
-    <footer>
-        <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
-        <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
-    </footer>
-    <script src="assets/js/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
-    <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
-    <script src="assets/js/bootstrap-multiselect.js"></script>
-    <script src="assets/js/main.js"></script>
+</div>
+<div class="modal fade" id="tasklargePopover" role="dialog" >
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center" role="document">
+            <div class="modal-content modal-lg">
+                <div class="modal-header hidden">
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="border-box">
+                            <span class="font-gray-small"> Now</span>
+                            <div class="actionPopover">
+                                <div class="clearfix">
+                                    <div class="col-lg-4">
+                                        <div class="pull-left">
+                                            <img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+                                        </div>
+                                        <div class="pull-left">
+                                            <div class="">ME</div>
+                                            <div class="font-gray-small">Country Manager - Canada</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <span class="approvedImage glyphicon glyphicon-ok"></span>
+                                        Approved
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-box">
+                            <span class="font-gray-small"> Thursday, Nov 16, 2916 | 17:21pm</span>
+                            <div class="actionPopover">
+                                <div class="clearfix">
+                                    <div class="col-lg-4">
+                                        <div class="clearfix">
+                                            <div class="pull-left">
+                                                <img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+                                            </div>
+                                            <div class="pull-left">
+                                                <div class="">Abigail</div>
+                                                <div class="font-gray-small">Country Manager - India | CPM</div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-area">
+                                            <textarea placeholder="Enter you comments here" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <span class="rejectedImage glyphicon glyphicon-remove"></span>Rejected
+                                    </div>
+                                </div>
+                                <div class="clearfix row">
+                                    <div class="col-sm-6 ">
+                                        <table class="table reject-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>HP Officejet 7612</th>
+                                                    <th>Original Value</th>
+                                                    <th>New Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Target PFV</td>
+                                                    <td>1.0</td>
+                                                    <td>1.0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MSRP</td>
+                                                    <td><span>$</span>200.00<span class="glyphicon glyphicon-option-horizontal" ></span><span class="glyphicon glyphicon-triangle-right" ></span></td>
+                                                    <td><span class="glyphicon glyphicon-arrow-up uparrow" ></span><span>$</span>200.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ASP (Average Street Price</td>
+                                                    <td><span>$</span>220.00<span class="glyphicon glyphicon-option-horizontal" ></span><span class="glyphicon glyphicon-triangle-right" ></span></td>
+                                                    <td><span class="glyphicon glyphicon-arrow-down downarrow" ></span><span>$</span>180.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <table class="table reject-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Added Competitors List</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>MFC-9330CDW</td>
+                                                    <td>Global</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>HL-3140CW</td>
+                                                    <td>EMEA</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PIXMA</td>
+                                                    <td>spain</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="border-box">
+                        <span class="font-gray-small"> Thursday, Nov 12, 2916 | 12:12pm</span>
+                        <div class="actionPopover">
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+                                </div>
+                                <div class="pull-left">
+                                    <div class="">Adam Dough</div>
+                                    <div class="font-gray-small">Country Manager - Canada - CBM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more"><a>Load More</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ............new product modal ................... -->
+<!--Send for Review Modal -->
+<div id="sendForReview" class="modal fade " role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-lg vertical-align-center">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Send for Review & Approval</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row send-box clearfix">
+                        <div class="col-md-6 pull-left">
+                            <div class="btn-group allot-region-country" role="group" aria-label="...">
+                                <button type="button" class="btn active">Global</button>
+                                <select  multiple="multiple" class="region" data-title="Region">
+                                    <option>Asia Pacific</option>
+                                    <option>EMEA</option>
+                                    <option>APJ</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                </select>
+                                <select multiple="multiple" class="country" data-title="Country">
+                                    <option>India</option>
+                                    <option>Malyasia</option>
+                                    <option>Russia</option>
+                                    <option>Singapore</option>
+                                    <option>Sri Lanka</option>
+                                    <option>USA</option>
+                                </select>
+                            </div>
+                            <div class="custom-search-input">
+                                <div class="input-group col-md-12">
+                                    <span class=" glyphicon glyphicon-search"></span>
+                                    <input type="search" class="  search-query form-control" placeholder="Search" />
+                                </div>
+                            </div>
+                            <div class="search-list">
+                                <ul>
+                                    <li>
+                                        <div id="1">
+                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                            <img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+                                            <span class="name">Barbara</span>
+                                            <span class="font-gray-small designation">RM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id="2">
+                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                            <img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+                                            <span class="name">Josh</span>
+                                            <span class="font-gray-small designation">RM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id="3">
+                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                            <img src="./assets/img/image2.jpg" class="img-responsive img-circle">
+                                            <span class="name">Abigail</span>
+                                            <span class="font-gray-small designation">RM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id="4">
+                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                            <img src="./assets/img/image3.jpg" class="img-responsive img-circle">
+                                            <span class="name">Sam</span>
+                                            <span class="font-gray-small designation">RM</span>
+                                        </div></li>
+                                        <li>
+                                            <div id="5">
+                                                <span class="checkbox"><input type="checkbox" name=""></span>
+                                                <img src="./assets/img/image4.jpg" class="img-responsive img-circle">
+                                                <span class="name">Kinley</span>
+                                                <span class="font-gray-small designation">RM</span>
+                                            </div></li>
+                                            <li>
+                                                <div id="6">
+                                                    <span class="checkbox"><input type="checkbox" name=""></span>
+                                                    <img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+                                                    <span class="name">Rose</span>
+                                                    <span class="font-gray-small designation">RM</span>
+                                                </div></li>
+                                                <li>
+                                                    <div id="7">
+                                                        <span class="checkbox"><input type="checkbox" name=""></span>
+                                                        <img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+                                                        <span class="name">Jimmy</span>
+                                                        <span class="font-gray-small designation">RM</span>
+                                                    </div></li>
+                                                    <li>
+                                                        <div id="8">
+                                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                                            <img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+                                                            <span class="name">Tom</span>
+                                                            <span class="font-gray-small designation">RM</span>
+                                                        </div></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pull-right">
+                                                <div class="top-right">
+                                                    <span>To</span>
+                                                    <div class="send-list">
+                                                    </div>
+                                                    <span>Message</span>
+                                                    <div class="message">
+                                                        <textarea></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-button">
+                                                    <button type="button" class="pull-right btn btn-primary addreviwer">Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+    <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+</footer>
+<script src="assets/js/jquery-3.1.1.min.js"></script>
+<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+<script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
+<script src="assets/js/bootstrap-multiselect.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

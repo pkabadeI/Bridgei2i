@@ -6,19 +6,21 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap-theme.min.css.map">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <link rel="stylesheet" href="assets/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" />
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/img/favicon.gif">
     </head>
     <body>
         <nav class="navbar header-menu navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
+                    <a class="navbar-brand brand-logo" href="#">
+                        <span></span>
+                    </a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="products.html">Products</a></li>
@@ -26,13 +28,14 @@
                     <li><a href="scenarios.html">Scenarios</a></li>
                     <li><a href="#">Dashboard</a></li>
                 </ul>
-                <div class="header-rightSection">
-                    <span class=" header-icons" aria-hidden="true">
-                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                <div class="header-rightSection clearfix">
+                    <span class="alarm header-icons pull-left" aria-hidden="true">
+                        <span class="badge">4</span>
                     </span>
-                    <a  href="#" rel="logoutPopover" data-popover-content="#userLogoutPopover" data-placement="bottom"><span class="header-icons" aria-hidden="true">
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    </span></a>
+                    <a  href="#" rel="logoutPopover" data-toggle="popover" data-popover-content="#userLogoutPopover" data-placement="bottom" class="popover-element">
+                        <span class="header-icons user-profile" aria-hidden="true">
+                        </span>
+                    </a>
                     <!-- logout popover ..... -->
                     <div id="userLogoutPopover" class="hide">
                         <div>
@@ -41,189 +44,453 @@
                         </div>
                     </div>
                     <!-- logout popover ..... -->
-                </div>
-            </div>
-        </nav>
-        <div class="tasks-page" id="tasks">
-            <div class="tasks-header col-lg-12">
-                <div class="tasks-title col-lg-2">Tasks</div>
-                <div class="total-tasks col-lg-2">
-                    <div class="tasks-count">54</div>
-                    <div class="count-title">Total Tasks</div>
-                </div>
-                <div class="open-tasks col-lg-2">
-                    <div class="tasks-count">22</div>
-                    <div class="count-title">Total Open Tasks</div>
-                </div>
-                <div class="close-tasks col-lg-2">
-                    <div class="tasks-count">32</div>
-                    <div class="count-title">Total Forwarded Tasks</div>
-                </div>
-                <div class="close-tasks col-lg-2">
-                    <div class="tasks-count">32</div>
-                    <div class="count-title">Total Closed Tasks</div>
-                </div>
-            </div>
-            <!-- popover -->
-            <div id="myPopover" class="hide">
-                <div>
-                    <span>Edit</span><br>
-                    <span>Delete</span>
-                </div>
-            </div>
-            <div id="taskimagePopover" class="hide">
-                <div>
-                    <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
-                    <p class="actionPopover"> Not the right set of<br>
-                        competitors. Revised<br>
-                        and updated with n…<br>
-                        <span style="color:#0096d6"> View in detail</span></p>
-                    </div>
-                </div>
-                <!-- popover end -->
-                <table id="tasksTable" class="table tasks-table " cellspacing="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th>Sl.No</th>
-                            <th>Date</th>
-                            <th>Requested By <span class="fa fa-filter filter-icon" aria-hidden="true"></span></th>
-                            <th>Product Name</th>
-                            <th>Product Type</th>
-                            <th>Forwarded To</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Sep 22,2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Mar 22,2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Jun 22,2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                            <td>New Product</td>
-                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                            <td>Forwarded</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Oct 9, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Closed</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Nov 14, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                            <td>New Product</td>
-                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image5.jpg"></span></div></td>
-                            <td>Forwarded</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Oct 9, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Oct 17, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
-                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Closed</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Mar 9, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                            <td>New Product</td>
-                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span></div></td>
-                            <td>Forwarded</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Dec 19, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>07/12/2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Dec 7, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
-                            <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
-                            <td>New Product</td>
-                            <td></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>Apr 9, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"> <img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
-                            <td>Open</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>Jan 4, 2016</td>
-                            <td><div><a  href="#" rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
-                            <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
-                            <td>New Product</td>
-                            <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"><a href=""  data-toggle="modal" data-target=""></a></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
-                            <td>Open</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <footer>
-                <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
-                <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
-            </footer>
-            <script src="assets/js/jquery-3.1.1.min.js"></script>
-            <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
-            <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
-            <script src="assets/js/bootstrap-multiselect.js"></script>
-            <script src="assets/js/main.js"></script>
-        </body>
-    </html>
+                    <div id="StatusFilter" class="hide">
+                        <div>
+                            <div class="actionPopover">
+                                <ul class=" dropdown-menu">
+                                    <li>
+                                        <a tabindex="0">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="Open"> Open
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="0">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="Closed"> Closed</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a tabindex="0">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" value="Forwarded"> Forwarded</label>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="RequestedByFilter" class="hide">
+                                <div>
+                                    <div class="actionPopover">
+                                        <ul class=" dropdown-menu">
+                                            <li>
+                                                <a tabindex="0">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="Adam Dough"> Adam Dough
+                                                    </label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a tabindex="0">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="Joe"> Joe</label>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a tabindex="0">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" value="Adam G">Adam G</label>
+                                                        </a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="imagePopoverRejected" class="hide">
+                                    <div>
+                                        <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
+                                        <div class="actionPopover col-sm-12">
+                                            <div class=" col-sm-4 rejectedImage no-padding glyphicon glyphicon-remove font-gray-small"></div>
+                                            <div class="col-sm-8 no-padding">
+                                                <span class="col-sm-12">Rejected</span>
+                                                <span class="col-sm-12">On Nov 2, 2016</span>
+                                            </div>
+                                        </div>
+                                        <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n… </div>
+                                    </div>
+                                </div>
+                                <div id="imagePopoverApproved" class="hide">
+                                    <div>
+                                        <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
+                                        <div class="actionPopover">
+                                            <span class=" col-sm-3 approvedImage no-padding glyphicon glyphicon-ok font-gray-small"></span>
+                                            <div class="col-sm-9 no-padding"><span class="col-sm-12">Approved</span>
+                                            <span class="col-sm-12">On Nov 2, 2016</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="allreviewers" class="hide">
+                                    <div>
+                                        <span class="allreviewers glyphicon glyphicon-triangle-left"></span>
+                                        <span class="allreviewers glyphicon glyphicon-triangle-right"></span>
+                                    </div>
+                                </div>
+                                <div id="imagePopoverPending" class="hide">
+                                    <div>
+                                        <div class="actionPopover">Jessica Jones<div>Country Manager - India</div></div>
+                                        <div class="actionPopover col-sm-12">
+                                            <div class="col-sm-4 pendingImage no-padding"></div>
+                                            <div class="col-sm-8 no-padding">
+                                                <span class="col-sm-12">Pending Review</span>
+                                                <span class="col-sm-12">On Nov 2, 2016</span>
+                                            </div>
+                                        </div>
+                                        <div class="actionPopover text-center" style="color:#0096d6">SEND REMINDER</div>
+                                    </div>
+                                </div>
+                                <div id="taskimagePopover" class="hide">
+                                    <div>
+                                        <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
+                                        <div class="actionPopover ">  Not the right set of competitors. Revised and updated with n…
+                                            <a href="view-task.html"> View in detail <span class="glyphicon glyphicon-arrow-right"></span></span></p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="tasks-page" id="tasks">
+                                <div class="tasks-header page-header col-sm-12">
+                                    <div class="tasks-title page-title col-sm-3">Tasks</div>
+                                    <div class="col-sm-9">
+                                        <div class="total-tasks col-sm-3">
+                                            <div class="tasks-count">54</div>
+                                            <div class="count-title">Total Tasks</div>
+                                        </div>
+                                        <div class="open-tasks col-lg-3">
+                                            <div class="tasks-count">22</div>
+                                            <div class="count-title">Total Open Tasks</div>
+                                        </div>
+                                        <div class="close-tasks col-lg-3">
+                                            <div class="tasks-count">32</div>
+                                            <div class="count-title">Total Forwarded Tasks</div>
+                                        </div>
+                                        <div class="close-tasks col-lg-3">
+                                            <div class="tasks-count">32</div>
+                                            <div class="count-title">Total Closed Tasks</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- popover -->
+                                <div id="myPopover" class="hide">
+                                    <div>
+                                        <span>Edit</span><br>
+                                        <span>Delete</span>
+                                    </div>
+                                </div>
+                                <!--     <div id="taskimagePopover" class="hide">
+                                    <div>
+                                        <div class="actionPopover">Adam Dough<div>Country Manager - Canada</div></div>
+                                        <p class="actionPopover"> Not the right set of<br>
+                                            competitors. Revised<br>
+                                            and updated with n…<br>
+                                            <span style="color:#0096d6"> View in detail</span></p>
+                                        </div>
+                                    </div>-->
+                                    <!-- popover end -->
+                                    <table id="tasksTable" class="table tasks-table " cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Sl.No</th>
+                                                <th>Date</th>
+                                                <th>Requested By <a href="#" rel="filterpopover" class="" data-toggle="popover" data-popover-content="#RequestedByFilter" data-placement="bottom" data-original-title="" title="">
+                                                    <span class="fa fa-filter filter-icon" aria-hidden="true"></span>
+                                                </a></th>
+                                                <th>Product Name</th>
+                                                <th>Product Type</th>
+                                                <th>Forwarded To</th>
+                                                <th>Status<a href="#" rel="filterpopover" class="" data-toggle="popover" data-popover-content="#StatusFilter" data-placement="bottom" data-original-title="" title="">
+                                                    <span class="fa fa-filter filter-icon" aria-hidden="true"></span>
+                                                </a></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Sep 22,2016</td>
+                                                <td><div><a rel="imagePopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Mar 22,2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-id="3">3</td>
+                                                <td>Jun 22,2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                                                <td>New Product</td>
+                                                <td> <div class="clearfix">
+                                                    <span class="pull-right">
+                                                        <span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal">
+                                                        </span>
+                                                    </span>
+                                                    <span class="pull-right">
+                                                        <a  rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverApproved" data-placement="bottom">
+                                                            <span class="roundImage approved">
+                                                                <img class="img-responsive img-circle" src="./assets/img/image1.jpg">
+                                                            </span>
+                                                        </a>
+                                                        <a  rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverPending" data-placement="bottom">
+                                                            <span class="roundImage">
+                                                                <img class="img-responsive img-circle" src="./assets/img/image3.jpg">
+                                                            </span>
+                                                        </a>
+                                                        <a  rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverPending" data-placement="bottom">
+                                                            <span class="roundImage">
+                                                                <img class="img-responsive img-circle" src="./assets/img/image2.jpg">
+                                                            </span>
+                                                        </a>
+                                                        <a  rel="imgPopover" class="popover-element" data-popover-content="#imagePopoverRejected" data-placement="bottom">
+                                                            <span class="roundImage rejected">
+                                                                <img class="img-responsive img-circle" src="./assets/img/image4.jpg">
+                                                            </span>
+                                                        </a>
+                                                    </span>
+                                                </div></td>
+                                                <td>Forwarded</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Oct 9, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Closed</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Nov 14, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                                                <td>New Product</td>
+                                                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small"></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image5.jpg"></span></div></td>
+                                                <td>Forwarded</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Oct 9, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal"></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Oct 17, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image2.jpg"></span></a></div></td>
+                                                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Closed</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Mar 9, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                                                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                                                <td>New Product</td>
+                                                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal"></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image4.jpg"></span></div></td>
+                                                <td>Forwarded</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Dec 19, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>07/12/2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>Dec 7, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image4.jpg"></span></a></div></td>
+                                                <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
+                                                <td>New Product</td>
+                                                <td></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>Apr 9, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal"></span></div><div class="pull-right"><span class="roundImage"> <img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image2.jpg"></span></div></td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>Jan 4, 2016</td>
+                                                <td><div><a  rel="imgPopover" data-popover-content="#taskimagePopover" data-placement="bottom"><span><img class="row-images" src="./assets/img/image5.jpg"></span></a></div></td>
+                                                <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
+                                                <td>New Product</td>
+                                                <td><div class="pull-right" ><span class="addImage glyphicon glyphicon-plus font-gray-small sendForReviewmodal"></span></div><div class="pull-right"><span class="roundImage"><img class="row-images" src="./assets/img/image1.jpg"></span><span class="roundImage"><img class="row-images" src="./assets/img/image3.jpg"></span></div></td>
+                                                <td>Open</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="sendForReview" class="modal fade " role="dialog">
+                                    <div class="vertical-alignment-helper">
+                                        <div class="modal-dialog modal-lg vertical-align-center">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Send for Review & Approval</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row send-box clearfix">
+                                                        <div class="col-md-6 pull-left">
+                                                            <div class="btn-group allot-region-country" role="group" aria-label="...">
+                                                                <button type="button" class="btn active">Global</button>
+                                                                <select  multiple="multiple" class="region" data-title="Region">
+                                                                    <option>Asia Pacific</option>
+                                                                    <option>EMEA</option>
+                                                                    <option>APJ</option>
+                                                                    <option>North America</option>
+                                                                    <option>South America</option>
+                                                                </select>
+                                                                <select multiple="multiple" class="country" data-title="Country">
+                                                                    <option>India</option>
+                                                                    <option>Malyasia</option>
+                                                                    <option>Russia</option>
+                                                                    <option>Singapore</option>
+                                                                    <option>Sri Lanka</option>
+                                                                    <option>USA</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="custom-search-input">
+                                                                <div class="input-group col-md-12">
+                                                                    <span class=" glyphicon glyphicon-search"></span>
+                                                                    <input type="search" class="  search-query form-control" placeholder="Search" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="search-list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div id="1">
+                                                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                            <img src="./assets/img/firstlady.jpg" class="img-responsive img-circle">
+                                                                            <span class="name">Barbara</span>
+                                                                            <span class="font-gray-small designation">RM</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div id="2">
+                                                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                            <img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+                                                                            <span class="name">Josh</span>
+                                                                            <span class="font-gray-small designation">RM</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div id="3">
+                                                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                            <img src="./assets/img/image2.jpg" class="img-responsive img-circle">
+                                                                            <span class="name">Abigail</span>
+                                                                            <span class="font-gray-small designation">RM</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div id="4">
+                                                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                            <img src="./assets/img/image3.jpg" class="img-responsive img-circle">
+                                                                            <span class="name">Sam</span>
+                                                                            <span class="font-gray-small designation">RM</span>
+                                                                        </div></li>
+                                                                        <li>
+                                                                            <div id="5">
+                                                                                <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                                <img src="./assets/img/image4.jpg" class="img-responsive img-circle">
+                                                                                <span class="name">Kinley</span>
+                                                                                <span class="font-gray-small designation">RM</span>
+                                                                            </div></li>
+                                                                            <li>
+                                                                                <div id="6">
+                                                                                    <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                                    <img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+                                                                                    <span class="name">Rose</span>
+                                                                                    <span class="font-gray-small designation">RM</span>
+                                                                                </div></li>
+                                                                                <li>
+                                                                                    <div id="7">
+                                                                                        <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                                        <img src="./assets/img/image1.jpg" class="img-responsive img-circle">
+                                                                                        <span class="name">Jimmy</span>
+                                                                                        <span class="font-gray-small designation">RM</span>
+                                                                                    </div></li>
+                                                                                    <li>
+                                                                                        <div id="8">
+                                                                                            <span class="checkbox"><input type="checkbox" name=""></span>
+                                                                                            <img src="./assets/img/image5.jpg" class="img-responsive img-circle">
+                                                                                            <span class="name">Tom</span>
+                                                                                            <span class="font-gray-small designation">RM</span>
+                                                                                        </div></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 pull-right">
+                                                                                <div class="top-right">
+                                                                                    <span>To</span>
+                                                                                    <div class="send-list">
+                                                                                    </div>
+                                                                                    <span>Message</span>
+                                                                                    <div class="message">
+                                                                                        <textarea></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="footer-button">
+                                                                                    <button type="button" class="pull-right btn btn-primary addreviwer">Send</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <span class="pull-left font-gray-small">Terms of Use | Privacy Policy</span>
+                                    <span class="pull-right font-gray-small">© 2016 Hewlett-Packard Development Company, L.P.</span>
+                                </footer>
+                                <script src="assets/js/jquery-3.1.1.min.js"></script>
+                                <script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+                                <script src="assets/js/bootstrap.min.js"></script>
+                                <script src="assets/DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+                                <script src="assets/DataTables-1.10.13/media/js/dataTables.bootstrap.js"></script>
+                                <script src="assets/js/bootstrap-multiselect.js"></script>
+                                <script src="assets/js/main.js"></script>
+                            </body>
+                        </html>

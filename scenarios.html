@@ -18,7 +18,9 @@
     <nav class="navbar header-menu navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand brand-logo" href="#"><img class="logo-image  img-responsive img-circle" src="./assets/img/HP-Logo.jpg"></a>
+          <a class="navbar-brand brand-logo" href="#">
+            <span></span>
+          </a>
         </div>
         <ul class="nav navbar-nav">
           <li><a href="products.html">Products</a></li>
@@ -26,13 +28,14 @@
           <li><a href="scenarios.html">Scenarios</a></li>
           <li><a href="#">Dashboard</a></li>
         </ul>
-        <div class="header-rightSection">
-          <span class=" header-icons" aria-hidden="true">
-            <i class="fa fa-bell-o" aria-hidden="true"></i>
+        <div class="header-rightSection clearfix">
+          <span class="alarm header-icons pull-left" aria-hidden="true">
+            <span class="badge">4</span>
           </span>
-          <a  href="#" rel="logoutPopover" data-popover-content="#userLogoutPopover" data-placement="bottom"><span class="header-icons" aria-hidden="true">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-          </span></a>
+          <a  href="#" rel="logoutPopover" data-toggle="popover" data-popover-content="#userLogoutPopover" data-placement="bottom" class="popover-element">
+            <span class="header-icons user-profile" aria-hidden="true">
+            </span>
+          </a>
           <!-- logout popover ..... -->
           <div id="userLogoutPopover" class="hide">
             <div>
@@ -69,6 +72,13 @@
         </div>
       </div>
       <!-- popover end -->
+                  <div id="scenariosActionContent" class="hide">
+                <div>
+                    <div class="actionPopover product-modal edit-product">Edit</div>
+                    <div class="actionPopover">Delete</div>
+                    <div class="actionPopover"><a data-toggle="modal" data-target="#tasklargePopover" data-placement="top">View Comments</a></div>
+                </div>
+            </div>
       <table id="scenariosTable" class="table scenarios-table " cellspacing="0" width="100%">
         <thead>
           <tr>
@@ -85,91 +95,143 @@
             <td>Sep 22,2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>2</td>
             <td>Mar 22,2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>3</td>
             <td>Jun 22,2016</td>
             <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
             <td>Officejet 5612 Wide Format e-All-in-One</td>
-            <td><a  class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>4</td>
             <td>Oct 9, 2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>5</td>
             <td>Nov 14, 2016</td>
             <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
             <td>Officejet 5612 Wide Format e-All-in-One</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>6</td>
             <td>Oct 9, 2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>7</td>
             <td>Oct 17, 2016</td>
             <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
             <td>Officejet 5612 Wide Format e-All-in-One</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+             <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>8</td>
             <td>Mar 9, 2016</td>
             <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
             <td>Officejet 5612 Wide Format e-All-in-One</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+           <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>9</td>
             <td>Dec 19, 2016</td>
             <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
             <td>Officejet 5612 Wide Format e-All-in-One</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+             <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>10</td>
             <td>07/12/2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+             <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>11</td>
             <td>Dec 7, 2016</td>
             <td><a>Officejet 5612 Wide Format e-All-in-One</a></td>
             <td>Officejet 5612 Wide Format e-All-in-One</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+             <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>12</td>
             <td>Apr 9, 2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+            <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
           <tr>
             <td>13</td>
             <td>Jan 4, 2016</td>
             <td><a>Officejet Pro 276dw Monochrome Printer</a></td>
             <td>Officejet Pro 276dw Monochrome Printer</td>
-            <td><a class="action-column" href="#" rel="scenariosActionPopover" data-popover-content="#scenariosActionContent" data-placement="bottom"><span class="fa fa-ellipsis-h action-button" aria-hidden="true"></span></a></td>
+             <td><a class="action-column clearfix" href="#" rel="scenariosActionPopover" class="popover-element" data-popover-content="#scenariosActionContent" data-placement="bottom">
+              <span class=" action-button" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </a></td>
           </tr>
         </tbody>
       </table>
