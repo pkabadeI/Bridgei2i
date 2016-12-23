@@ -242,9 +242,10 @@ footer {
 }
 .page-header {
 	font-size: 30px;
-	margin-top:10px;
+	margin-top: 10px;
 	border: 0;
 	padding-bottom: 0;
+
 	span {
 		padding: 0;
 	}
@@ -330,9 +331,9 @@ footer {
 		}
 	}
 }
-	.control-label {
-		padding-bottom: 10px;
-	}
+.control-label {
+	padding-bottom: 10px;
+}
 .page-details {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -756,6 +757,10 @@ table#product-detail {
 		min-height: 200px;
 		padding: 10px;
 		border-radius: 5px;
+		    height: 207px;
+    width: 100%;
+    overflow: auto;
+
 
 		img {
 			display: inline-block;
@@ -1100,9 +1105,9 @@ a[rel="allreviewerspopover"] {
 				height: 30px;
 				display: block;
 				vertical-align: middle;
-				font-size: 10px;
+				font-size: 18px;
 				text-align: center;
-				padding: 8px;
+				padding: 4px;
 				color: red;
 				//margin: 0 0% 10px;
 			}
@@ -1116,11 +1121,10 @@ a[rel="allreviewerspopover"] {
 				height: 30px;
 				display: block;
 				vertical-align: middle;
-				font-size: 10px;
+				font-size: 18px;
 				text-align: center;
-				padding: 8px;
+				padding: 4px;
 				color: #59FF92;
-				//margin: 0 0% 10px;
 			}
 		}
 		.pendingImage {
@@ -1131,6 +1135,11 @@ a[rel="allreviewerspopover"] {
 			display: block;
 			background-size: 30px 30px;
 		}
+	}
+}
+#imagePopoverPending{
+	.actionPopover a{
+		margin: 0;
 	}
 }
 .singlereviewer {
@@ -1179,26 +1188,27 @@ a[rel="allreviewerspopover"] {
 	.popover-content {
 		width: 250px;
 	}
-	
 }
 .allreviewers {
-	
-    position: absolute;
-    top: 20px;
-    font-size: 20px;
-    margin: 0 7px 10px;
-    color: #999;
-    display: inline-block;
-	top:20px ;
-		&.glyphicon-triangle-left {
-			float: left;
-		}
-		&.glyphicon-triangle-right {
-			float: right;
-			height: 100%;
-			right: 0;
-		}
+	position: absolute;
+	top: 20px;
+	font-size: 20px;
+	margin: 0 7px 10px;
+	color: #999;
+	display: inline-block;
+	top: 20px;
+	&.disabled{
+		color: #ECEDEF;
 	}
+	&.glyphicon-triangle-left {
+		float: left;
+	}
+	&.glyphicon-triangle-right {
+		float: right;
+		height: 100%;
+		right: 0;
+	}
+}
 #StatusFilter .actionPopover  .dropdown-menu, #RequestedByFilter .actionPopover  .dropdown-menu {
 	display: block;
 	left: -80px;
@@ -1712,19 +1722,19 @@ li.active {
 		height: 30px;
 	}
 }
-	.message-icon {
-		cursor: pointer;
-		position: absolute;
-		margin: auto;
-		background-image: url("../img/Comments History@2x.png");
-		background-repeat: no-repeat;
-		background-size: 50px 50px;
-		width: 50px;
-		height: 50px;
-		display: block;
-		top: 75%;
-		right: 50px;
-	}
+.message-icon {
+	cursor: pointer;
+	position: absolute;
+	margin: auto;
+	background-image: url("../img/Comments History@2x.png");
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	display: block;
+	top: 75%;
+	right: 50px;
+}
 #tasklargePopover {
 	.modal-lg.modal-content {
 		height: 460px;
@@ -1773,7 +1783,7 @@ li.active {
 		}
 	}
 	p {
-		font-family: "Roboto Regular";
+		font-family: "Roboto";
 		padding: 10px;
 		text-overflow: ellipsis;
 		max-height: 99px;
@@ -1802,9 +1812,9 @@ li.active {
 			height: 30px;
 			display: block;
 			vertical-align: middle;
-			font-size: 10px;
+			font-size: 18px;
 			text-align: center;
-			padding: 8px;
+			padding: 4px;
 			color: red;
 			margin: 0 0% 10px;
 		}
@@ -1817,8 +1827,8 @@ li.active {
 	.text-area {
 		background-color: transparent;
 		border: 1px solid #ccc;
-		margin-bottom: 10px;
-
+    margin: 10px 15px;
+    width: 49%;
 		.sign {
 			line-height: 35px;
 			padding: 10px 0 10px 10px;
@@ -1843,6 +1853,15 @@ li.active {
 	}
 }
 #tasklargePopover {
+	 .ellipsis-arrow{
+	 		background-image: url(../img/dot_arrow_right.png);
+    background-size: 25px 10px;
+    display: inline-block;
+    width: 25px;
+    height: 10px;
+    background-repeat: no-repeat;
+    float: right;
+	 }
 	.modal-content {
 		border-radius: 0
 	}
@@ -1850,6 +1869,7 @@ li.active {
 		border-collapse: separate;
 		padding: 0 10px;
 		border-radius: 5px;
+		margin: 0 ;
 
 		tr:hover {
 			background-color: #FFFEEB;
@@ -1871,9 +1891,9 @@ li.active {
 			height: 30px;
 			display: block;
 			vertical-align: middle;
-			font-size: 10px;
+			font-size: 18px;
 			text-align: center;
-			padding: 8px;
+			padding: 4px;
 			color: red;
 			margin: 0 0% 10px;
 		}
@@ -1887,9 +1907,9 @@ li.active {
 			height: 30px;
 			display: block;
 			vertical-align: middle;
-			font-size: 10px;
+			font-size: 18px;
 			text-align: center;
-			padding: 8px;
+			padding: 4px;
 			color: #59FF92;
 			margin: 0 0 10px;
 		}
@@ -1977,9 +1997,11 @@ li.active {
 }
 .load-more {
 	width: 100%;
-	padding: 10px;
+	padding: 5px 10px;
 	margin: 5px;
-	background-color: #ccc;
+	background-color: #EFEFEF;
+	border:1px solid #CECECE;
+	border-radius: 5px;
 	text-align: center;
 }
 .addcompetitor {
@@ -2077,7 +2099,7 @@ li.active {
 		}
 	}
 	.new-product {
-		font-size: 15px;
+		font-size: 14px;
 		color: #0196D6;
 		margin-left: 15px;
 		cursor: pointer;

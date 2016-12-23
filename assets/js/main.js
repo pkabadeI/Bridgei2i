@@ -1,7 +1,9 @@
-
 $(document).ready(function() {
-var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1','Amsterdam2','Amsterdam3','Amsterdam4','Amsterdam5','Amsterdam6','Amsterdam7','Amsterdam8','Amsterdam9','Amsterdam10','Amsterdam11','Amsterdam12','Amsterdam13','Amsterdam14','Amsterdam15','Amsterdam16','Amsterdam17','Amsterdam18','Amsterdam19','Amsterdam20','Amsterdam21','Amsterdam22','Amsterdam23','Amsterdam24','Amsterdam25'];
-    $("#existingProductList").typeahead({ source:data, showHintOnFocus: "all"});
+    var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo', 'Amsterdam1', 'Amsterdam2', 'Amsterdam3', 'Amsterdam4', 'Amsterdam5', 'Amsterdam6', 'Amsterdam7', 'Amsterdam8', 'Amsterdam9', 'Amsterdam10', 'Amsterdam11', 'Amsterdam12', 'Amsterdam13', 'Amsterdam14', 'Amsterdam15', 'Amsterdam16', 'Amsterdam17', 'Amsterdam18', 'Amsterdam19', 'Amsterdam20', 'Amsterdam21', 'Amsterdam22', 'Amsterdam23', 'Amsterdam24', 'Amsterdam25'];
+    $("#existingProductList").typeahead({
+        source: data,
+        showHintOnFocus: "all"
+    });
 
     $('[rel="imgPopover"]').popover({
             trigger: "manual",
@@ -26,7 +28,7 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
 
     $("#products").find('[rel="actionPopover"]').popover({
         container: $('#productTable'),
-            trigger: "manual",
+        trigger: "manual",
         html: true,
         content: function() {
             var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -110,32 +112,32 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
         });
 
     //$(document).on("click", "[rel='allreviewerspopover']", function(e) {
-      //  e.preventDefault();
-       // $('.popover').addClass('allreviewers-popover').show();
+    //  e.preventDefault();
+    // $('.popover').addClass('allreviewers-popover').show();
     //})
 
     $('[rel="task-popover"]').popover({
-        container: 'body',
-        trigger: "manual",
-        html: true,
-        content: function() {
-            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
-            return clone;
-        }
-    })
-    .on("mouseenter", function() {
-        var _this = this;
-        $('.popover').hide();
-        $(this).popover("show").addClass('task-popover');
-    }).on("mouseleave", function() {
-        var _this = this;
-        setTimeout(function() {
-            if (!$(".popover:hover").length) {
-                $(_this).popover("hide");
+            container: 'body',
+            trigger: "manual",
+            html: true,
+            content: function() {
+                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                return clone;
             }
-        }, 300);
-    });
- 
+        })
+        .on("mouseenter", function() {
+            var _this = this;
+            $('.popover').hide();
+            $(this).popover("show").addClass('task-popover');
+        }).on("mouseleave", function() {
+            var _this = this;
+            setTimeout(function() {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide");
+                }
+            }, 300);
+        });
+
     $('a[rel="imagePopover"]').popover({
         container: $(this),
         trigger: "click",
@@ -144,7 +146,7 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
             var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
             return clone;
         }
-    }) .on("mouseenter", function() {
+    }).on("mouseenter", function() {
         var _this = this;
         $(this).popover("show").addClass('img-popover');
     }).on("mouseleave", function() {
@@ -155,21 +157,21 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
             }
         }, 300);
     });
-    $('[data-toggle]').on('click', function (e) {
-    $('.btn').not(this).popover('hide');
-});
+    $('[data-toggle]').on('click', function(e) {
+        $('.btn').not(this).popover('hide');
+    });
     $(".popover").on("mouseleave", function() {
         var _this = this;
-                $(_this).popover("hide");
+        $(_this).popover("hide");
     });
     $('body').on('click', function(e) {
-        if ($(e.target).data('toggle') !== 'popover'
-        && $(e.target).parents('.popover.in').length === 0) { 
-        $('[data-toggle="popover"]').popover('hide');
-    }
-    if ($(e.target).data('toggle') !== 'popover'
-            && $(e.target).parents('[data-toggle="popover"]').length === 0
-            && $(e.target).parents('.popover.in').length === 0) { 
+        if ($(e.target).data('toggle') !== 'popover' &&
+            $(e.target).parents('.popover.in').length === 0) {
+            $('[data-toggle="popover"]').popover('hide');
+        }
+        if ($(e.target).data('toggle') !== 'popover' &&
+            $(e.target).parents('[data-toggle="popover"]').length === 0 &&
+            $(e.target).parents('.popover.in').length === 0) {
             $('[data-toggle="popover"]').popover('hide');
         }
         /* $('.popover-element').each(function() {
@@ -200,17 +202,17 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
                 $(this).popover('hide');
             }
         });
-         $('[rel="actionPopover"]').each(function() {
+        $('[rel="actionPopover"]').each(function() {
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
             }
         });
-          $('[rel="task-popover"]').each(function() {
+        $('[rel="task-popover"]').each(function() {
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
             }
         });
-          $('[rel="scenariosActionPopover"]').each(function() {
+        $('[rel="scenariosActionPopover"]').each(function() {
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
             }
@@ -231,13 +233,13 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
     });
 
     $('body').on('hover', function(e) {
-         if ($(e.target).data('toggle') !== 'popover'
-        && $(e.target).parents('.popover.in').length === 0) { 
-        $('[data-toggle="popover"]').popover('hide');
-    }
-    if ($(e.target).data('toggle') !== 'popover'
-            && $(e.target).parents('[data-toggle="popover"]').length === 0
-            && $(e.target).parents('.popover.in').length === 0) { 
+        if ($(e.target).data('toggle') !== 'popover' &&
+            $(e.target).parents('.popover.in').length === 0) {
+            $('[data-toggle="popover"]').popover('hide');
+        }
+        if ($(e.target).data('toggle') !== 'popover' &&
+            $(e.target).parents('[data-toggle="popover"]').length === 0 &&
+            $(e.target).parents('.popover.in').length === 0) {
             $('[data-toggle="popover"]').popover('hide');
         }
     });
@@ -252,35 +254,40 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
                 "<span class='col-sm-12'>On Nov 2, 2016</span></div></div>");
         });
         $(".singlereviewer:not(:first-child)").addClass("hidden");
+        $(".glyphicon-triangle-left").addClass("disabled");
         $(".allreviewers + .singlereviewer").removeClass("hidden");
         $(".allreviewers-popover").removeClass("img-popover");
         $(".popover").css("left", parseInt($(this).offset().left - 405) + "px");
     });
     $(document).on('click', 'span.allreviewers', function(k, e) {
+       
         if ($(this).hasClass("glyphicon-triangle-left")) {
             var ele = $(".singlereviewer:not(.hidden)");
-            if ($(ele).prev(".singlereviewer").length > 0)
+            
+            if ($(ele).prev(".singlereviewer").length > 0){
                 $(ele).addClass("hidden").prev(".singlereviewer").removeClass("hidden");
-            if ($(".singlereviewer:not(.hidden)").prev(".singlereviewer").length > 0){
-                $(this).addClass("disabled");
             }
             }
-            if ($(".singlereviewer:not(.hidden)").next(".singlereviewer").length > 0)
-                {
-                 $(".glyphicon-triangle-right").addClass("disabled");
-                }
-        
-        if ($(this).hasClass("glyphicon-triangle-right")) {
+             if ($(this).hasClass("glyphicon-triangle-right")) {
             var ele = $(".singlereviewer:not(.hidden)");
+            
             if ($(ele).next(".singlereviewer").length > 0)
                 $(ele).addClass("hidden").next(".singlereviewer").removeClass("hidden");
-            if ($(".singlereviewer:not(.hidden)").next(".singlereviewer").length > 0)
-                $(this).attr("disabled", "disabled");
-            if ($(".singlereviewer:not(.hidden)").prev(".singlereviewer").length > 0)
-                $(".glyphicon-triangle-left").attr("disabled", "disabled")
         }
+           
+            if ($(".singlereviewer:not(.hidden)").prev(".singlereviewer").length == 0) {
+                $(".glyphicon-triangle-left").addClass("disabled");
+            }
+            else 
+                $(".glyphicon-triangle-left").removeClass("disabled");
+
+        if ($(".singlereviewer:not(.hidden)").next(".singlereviewer").length == 0) {
+            $(".glyphicon-triangle-right").addClass("disabled");
+        }
+        else 
+            $(".glyphicon-triangle-right").removeClass("disabled");
     });
-    //
+
     $(document).on('show.bs.popover', 'a[rel="filterpopover"]', function() {
         $(document).on("click", ".popover-content input", function() {
 
@@ -296,6 +303,7 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
                 $("#RequestedByFilter").html($(".popover-content").html());
         });
     });
+
     $(document).on("hidden.bs.popover", 'a[rel="filterpopover"]', function(e) {
         if ($(".popover").find('#StatusFilter').length > 0)
             $("#StatusFilter").html($(".popover-content").html());
@@ -303,6 +311,7 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
         if ($(".popover").find('#RequestedByFilter').length > 0)
             $("#RequestedByFilter").html($(".popover-content").html());
     });
+
     //Add row in table  
     $(document).on("click", ".new-feature span", function(e) {
         if (!$(".view-product-details").hasClass("view")) {
@@ -382,7 +391,9 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
         $('#product-detail').css("width", "auto");
         $('#product-detail').find('td').css("width", "300px");
     });
-
+$(document).on("click",".search-list ul li",function(){
+    $(this).find("input[type='checkbox']").trigger("click");
+});
     $(document).on("click", ".checkbox input", function(e) {
         if ($(this)[0].checked) {
             $(this).parents('li').addClass("active");
@@ -602,7 +613,7 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
             "targets": 'no-sort',
             "orderable": false,
         }],
-         "length": 6
+        "length": 6
     });
     $(".products-page.page-content").find("div.table-panel-heading").html('<span class="products-table-heading">My New Products</span>');
     $(".products-page.page-content").find("div.table-panel-action").html('<div class="products-table-heading-right"><span class="addcompetitor glyphicon glyphicon-plus new-product product-modal"></span><span class="new-product product-modal">NEW PRODUCT</span></div>');
@@ -994,7 +1005,7 @@ var data = ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo','Amsterdam1'
 
 function imgError(image) {
     $(image).onerror = null;
-    $(image).addClass("hidden"); 
+    $(image).addClass("hidden");
     $(image).parent("span").append("<span>RK</span>");
     return true;
 }
@@ -1079,7 +1090,7 @@ function hideReviewer() {
             else
                 $(e).find('a:not([rel="allreviewerspopover"]):nth-child(2)').after('<a rel="allreviewerspopover" data-toggle="popover" data-popover-content="#allreviewers" data-placement="bottom" class="popover-element"><span class=count-rest>' + ($(e).find('a.popover-element:not([rel="allreviewerspopover"])').length - 2) + '</span></a>');
 
-  /*          var popOverSettings = {
+            /*          var popOverSettings = {
                 container: $(this),
                 placement: 'bottom',
                 html: true,
@@ -1091,26 +1102,26 @@ function hideReviewer() {
             $('body').popover(popOverSettings);
 */
 
- $('[rel="allreviewerspopover"]').popover({
-            trigger: "manual",
-            html: true,
-            animation: false,
-            content: function() {
-                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
-                return clone;
-            }
-        })
-        .on("mouseenter", function() {
-            var _this = this;
-            $(this).popover("show").addClass('allreviewers-popover');
-        }).on("mouseleave", function() {
-            var _this = this;
-            setTimeout(function() {
-                if (!$(".popover:hover").length) {
-                    $(_this).popover("hide");
-                }
-            }, 300);
-        });
+            $('[rel="allreviewerspopover"]').popover({
+                    trigger: "manual",
+                    html: true,
+                    animation: false,
+                    content: function() {
+                        var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                        return clone;
+                    }
+                })
+                .on("mouseenter", function() {
+                    var _this = this;
+                    $(this).popover("show").addClass('allreviewers-popover');
+                }).on("mouseleave", function() {
+                    var _this = this;
+                    setTimeout(function() {
+                        if (!$(".popover:hover").length) {
+                            $(_this).popover("hide");
+                        }
+                    }, 300);
+                });
             var approved = $(e).find("a[data-popover-content='#imagePopoverApproved'].hidden").length;
             var rejected = $(e).find("a[data-popover-content='#imagePopoverRejected'].hidden").length;
             var hidden = $(e).find("a.hidden").length;
