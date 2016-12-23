@@ -23,6 +23,7 @@ $(document).ready(function() {
 
     $("#products").find('[rel="actionPopover"]').popover({
         container: $('#productTable'),
+            trigger: "manual",
         html: true,
         content: function() {
             var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -43,7 +44,7 @@ $(document).ready(function() {
     $('[rel="logoutPopover"]')
         .popover({
             container: 'nav',
-            trigger: "hover",
+            trigger: "manual",
             html: true,
             content: function() {
                 var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -65,7 +66,7 @@ $(document).ready(function() {
     $('[rel="filterpopover"]')
         .popover({
             container: 'body',
-            trigger: 'hover',
+            trigger: 'manual',
             html: true,
             content: function() {
                 var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -80,13 +81,13 @@ $(document).ready(function() {
                 if (!$(".popover:hover").length) {
                     $(_this).popover("hide");
                 }
-            }, 300);
+            }, 100);
         });
 
     $('[rel="allreviewerspopover"]')
         .popover({
             container: $('#productTable'),
-            trigger: 'hover',
+            trigger: 'manual',
             html: true,
             content: function() {
                 var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -112,7 +113,7 @@ $(document).ready(function() {
 
     $('[rel="task-popover"]').popover({
         container: 'body',
-        trigger: "click",
+        trigger: "manual",
         html: true,
         content: function() {
             var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -130,32 +131,11 @@ $(document).ready(function() {
             }
         }, 300);
     });
-
-    $('[rel="tasklarge-popover"]').popover({
-        container: 'body',
-        html: true,
-        content: function() {
-            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
-            return clone;
-        }
-    })
-     .on("mouseenter", function() {
-        var _this = this;
-        $(this).popover("show").addClass('tasklarge-popover  task-popover');
-    }).on("mouseleave", function() {
-        var _this = this;
-        setTimeout(function() {
-            if (!$(".popover:hover").length) {
-                $(_this).popover("hide");
-            }
-        }, 300);
-    });
  
     $('a[rel="imagePopover"]').popover({
         container: 'body',
         trigger: "click",
         html: true,
-        //delay:200,
         content: function() {
             var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
             return clone;
@@ -171,11 +151,27 @@ $(document).ready(function() {
             }
         }, 300);
     });
+    $('[data-toggle]').on('click', function (e) {
+    $('.btn').not(this).popover('hide');
+});
+    $(".popover").on("mouseleave", function() {
+        var _this = this;
+                $(_this).popover("hide");
+    });
     $('body').on('click', function(e) {
+        if ($(e.target).data('toggle') !== 'popover'
+        && $(e.target).parents('.popover.in').length === 0) { 
+        $('[data-toggle="popover"]').popover('hide');
+    }
+    if ($(e.target).data('toggle') !== 'popover'
+            && $(e.target).parents('[data-toggle="popover"]').length === 0
+            && $(e.target).parents('.popover.in').length === 0) { 
+            $('[data-toggle="popover"]').popover('hide');
+        }
         /* $('.popover-element').each(function() {
              // hide any open popovers when the anywhere else in the body is clicked
              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                 $(this).popover('hide');
+                 $(this).popover('hide'
              }
          });*/
         $('[rel="filterpopover"]').each(function() {
@@ -205,27 +201,39 @@ $(document).ready(function() {
                 $(this).popover('hide');
             }
         });
-
+         $('[rel="actionPopover"]').each(function() {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
     });
+
     $('a[rel="imgPopover"]').on('shown.bs.popover', function() {
-        // if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0)
-        // if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0 || $(".popover").find("#imagePopoverPending").length > 0)
+        $('a[rel="imgPopover"]').not(this).popover('hide');
         $('.popover').css("left", parseInt($(this).offset().left - 125) + "px");
     });
     $('a[rel="imagePopover"]').on('shown.bs.popover', function() {
-        //if ($(".popover").find("#taskimagePopover").length > 0)
+        $('a[rel="imagePopover"]').not(this).popover('hide');
         $('.popover').css("left", parseInt($(this).offset().left - 125) + "px");
     });
     $('a[rel="task-popover"]').on('shown.bs.popover', function() {
-        //if ($(".popover").find("#taskPopover").length > 0) {
-
         $('.popover').css("left", parseInt($(this).offset().left - 220) + "px");
-        //}
     });
 
+    $('body').on('hover', function(e) {
+         if ($(e.target).data('toggle') !== 'popover'
+        && $(e.target).parents('.popover.in').length === 0) { 
+        $('[data-toggle="popover"]').popover('hide');
+    }
+    if ($(e.target).data('toggle') !== 'popover'
+            && $(e.target).parents('[data-toggle="popover"]').length === 0
+            && $(e.target).parents('.popover.in').length === 0) { 
+            $('[data-toggle="popover"]').popover('hide');
+        }
+    });
     $(document).on('show.bs.popover', 'a[rel="allreviewerspopover"]', function() {
 
-        var e = $(this).parent("span");
+        var e = $(this).parents("td");
         var hidden = $(e).find("a.hidden").length;
         $("#allreviewers").find("div.singlereviewer").remove();
         $(e).find('a.popover-element.hidden').each(function(k, ele) {
@@ -280,7 +288,6 @@ $(document).ready(function() {
         else
         if ($(".popover").find('#RequestedByFilter').length > 0)
             $("#RequestedByFilter").html($(".popover-content").html());
-        // $("#StatusFilter").html($(".popover-content").html());
     });
     //Add row in table  
     $(document).on("click", ".new-feature span", function(e) {
@@ -309,7 +316,6 @@ $(document).ready(function() {
     });
 
     //remove row from table  
-
     $(document).on("click", ".remove-row", function(e) {
         if (!$(".view-product-details").hasClass("view")) {
             var count = $(this).parents('tr').find('.count').html();
@@ -341,14 +347,14 @@ $(document).ready(function() {
     });
 
 
-    /*$(document).on("click", ".addcompetitors", function(e) {
+    $(document).on("click", ".addcompetitors", function(e) {
         var competitors = $('#addcompetitor').find('input[type="checkbox"]:checked');
-        var index = $('#product-details').find('th.competitors').index();
+        var index = $('#productdetailstable').find('th.competitors').index();
         $(competitors).each(function(k, v) {
-            $('.dataTables_scrollHeadInner').find('thead > tr:first-child').find('th:nth-child(' + (index) + ')').after('<th><div class="text-overflow">' + $(this).parent("span").text() + '</div> <span class="glyphicon-minus remove-column glyphicon pull-right"></span></th>')
-            $('.dataTables_scrollHeadInner').find('thead > tr:nth-child(2)').find('th:nth-child(' + (index + 1) + ')').html('<span class="pull-left">Feature Specs</span><span class="pull-right">Valuation</span>');
-            $('.dataTables_scrollHeadInner').find('thead > tr:nth-child(2)').append('<th></th>');
-            $('#product-details').find('tbody > tr').each(function(key, value) {
+            $('#productdetailstable').find('thead > tr:first-child').find('th:nth-child(' + (index) + ')').after('<th><div class="text-overflow">' + $(this).parent("span").text() + '</div> <span class="glyphicon-minus remove-column glyphicon pull-right"></span></th>')
+            $('#productdetailstable').find('thead > tr:nth-child(2)').find('th:nth-child(' + (index + 1) + ')').html('<span class="pull-left">Feature Specs</span><span class="pull-right">Valuation</span>');
+            $('#productdetailstable').find('thead > tr:nth-child(2)').append('<th></th>');
+            $('#productdetailstable').find('tbody > tr').each(function(key, value) {
                 if ($(this).find('.new-feature').length > 0 ||
                     $(this).find('.section-head').length > 0 ||
                     $(this).find('.summary').length > 0 || key == 0 ||
@@ -357,7 +363,7 @@ $(document).ready(function() {
                 else
                     $(this).find('td:nth-child(' + (index + 1) + ')').before("<td><span class='sign'>$</span><span>200</span></td>");
             });
-            $('#product-details').DataTable().draw();
+           // $('#productdetailstable').DataTable().draw();
 
           //  $.fn.dataTable.tables({
             //    visible: true,
@@ -368,7 +374,7 @@ $(document).ready(function() {
         $('#product-detail').css("width", "auto");
         $('#product-detail').find('td').css("width", "300px");
     });
-*/
+
     $(document).on("click", ".checkbox input", function(e) {
         if ($(this)[0].checked) {
             $(this).parents('li').addClass("active");
@@ -580,7 +586,7 @@ $(document).ready(function() {
     // })
 
     $('.products-page.page-content ').find('#productTable').DataTable({
-        "sDom": "<'row products-toolbar table-head'<'col-sm-5'<'table-panel-heading'>><'col-sm-4'<'table-panel-action pull-right'>><'col-sm-3'f>>" +
+        "sDom": "<'row products-toolbar table-head'<'col-sm-5'<'table-panel-heading'>><'col-sm-6 pull-right'<'pull-right search'f><'table-panel-action pull-right'>>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row'<'col-sm-6' i><'col-sm-6'<'pull-right'p><'table-footer pull-right'l>>>",
         "oLanguage": {
@@ -602,6 +608,7 @@ $(document).ready(function() {
             "targets": 'no-sort',
             "orderable": false,
         }],
+         "length": 6
     });
     $(".products-page.page-content").find("div.table-panel-heading").html('<span class="products-table-heading">My New Products</span>');
     $(".products-page.page-content").find("div.table-panel-action").html('<div class="products-table-heading-right"><span class="addcompetitor glyphicon glyphicon-plus new-product product-modal"></span><span class="new-product product-modal">NEW PRODUCT</span></div>');
@@ -992,11 +999,9 @@ $(document).ready(function() {
 });
 
 function imgError(image) {
-    $(image).onerror = "";
-    //image.src = "/images/noimage.gif";
-    $(image).addClass("hidden"); //= "/images/noimage.gif";
-    $(image).parent("span").append("<span>RK</span>"); //= "/images/noimage.gif";
-
+    $(image).onerror = null;
+    $(image).addClass("hidden"); 
+    $(image).parent("span").append("<span>RK</span>");
     return true;
 }
 
@@ -1072,7 +1077,7 @@ function ClearModal() {
 
 function hideReviewer() {
     $("#productTable").find("td:nth-child(6)").each(function(k, element) {
-        var e = $(this).find("span");
+        var e = $(this);
         if ($(e).find('a:not([rel="allreviewerspopover"])').length > 3) {
             $(e).find('a:not([rel="allreviewerspopover"]):nth-child(n+3)').addClass("hidden");
             if ($(e).find('a[rel="allreviewerspopover"]').length > 0)
