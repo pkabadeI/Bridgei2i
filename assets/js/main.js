@@ -76,7 +76,7 @@ $(document).ready(function() {
         $('.popover').addClass('allreviewers-popover');
     })
 
-    $("#products").find('[rel="imgPopover"]').popover({
+    $('[rel="imgPopover"]').popover({
         container: $(this),
         trigger: "hover",
         html: true,
@@ -86,11 +86,11 @@ $(document).ready(function() {
         }
     }).click(function(e) {
         e.preventDefault();
-        if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0)
+        if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0|| $(".popover").find("#imagePopoverPending").length > 0)
             $('.popover').addClass('img-popover');
     }).hover(function(e) {
         e.preventDefault();
-        if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0)
+        if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0|| $(".popover").find("#imagePopoverPending").length > 0)
             $('.popover').addClass('img-popover');
     });
 
@@ -171,7 +171,8 @@ $('a[rel="imagePopover"]').popover({
 
     });
     $('a[rel="imgPopover"]').on('shown.bs.popover', function() {
-        if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0)
+       // if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0)
+        if ($(".popover").find("#imagePopoverApproved").length > 0 || $(".popover").find("#imagePopoverRejected").length > 0|| $(".popover").find("#imagePopoverPending").length > 0)
             $('.popover').css("left", parseInt($(this).offset().left - 125) + "px");
     });
     $('a[rel="imagePopover"]').on('shown.bs.popover', function() {
@@ -186,8 +187,7 @@ $('a[rel="imagePopover"]').popover({
     });
 
     $(document).on('show.bs.popover', 'a[rel="allreviewerspopover"]', function() {
-        $(".allreviewers-popover").removeClass("img-popover");
-        $(".popover.allreviewers-popover").css("left", parseInt($(this).offset().left - 405) + "px !important");
+        
         var e = $(this).parent("span");
         var hidden = $(e).find("a.hidden").length;
         $("#allreviewers").find("div.singlereviewer").remove();
@@ -198,7 +198,9 @@ $('a[rel="imagePopover"]').popover({
         });
         $(".singlereviewer:not(:first-child)").addClass("hidden");
         $(".allreviewers + .singlereviewer").removeClass("hidden");
-    });
+   $(".allreviewers-popover").removeClass("img-popover");
+        $(".allreviewers-popover").css("left", parseInt($(this).offset().left - 405) + "px");
+         });
     $(document).on('click', 'span.allreviewers', function(k, e) {
         if ($(this).hasClass("glyphicon-triangle-left")) {
             var ele = $(".singlereviewer:not(.hidden)");
@@ -302,7 +304,7 @@ $('a[rel="imagePopover"]').popover({
     });
 
 
-    $(document).on("click", ".addcompetitors", function(e) {
+    /*$(document).on("click", ".addcompetitors", function(e) {
         var competitors = $('#addcompetitor').find('input[type="checkbox"]:checked');
         var index = $('#product-details').find('th.competitors').index();
         $(competitors).each(function(k, v) {
@@ -329,7 +331,7 @@ $('a[rel="imagePopover"]').popover({
         $('#product-detail').css("width", "auto");
         $('#product-detail').find('td').css("width", "300px");
     });
-
+*/
     $(document).on("click", ".checkbox input", function(e) {
         if ($(this)[0].checked) {
             $(this).parents('li').addClass("active");
@@ -527,8 +529,8 @@ $('a[rel="imagePopover"]').popover({
     /* ............ script for products page start .............. */
 
 
-    $('.view-product-details').find('#product-details').DataTable({
-        scrollY: false,
+   // $('.view-product-details').find('#product-details').DataTable({
+        /*scrollY: false,
         "paging": false,
         "ordering": false,
         "info": false,
@@ -537,8 +539,8 @@ $('a[rel="imagePopover"]').popover({
         paging: false,
         fixedColumns: {
             leftColumns: 2,
-        }
-    })
+        }*/
+   // })
 
     $('.products-page.page-content ').find('#productTable').DataTable({
         "sDom": "<'row products-toolbar table-head'<'col-sm-5'<'table-panel-heading'>><'col-sm-4'<'table-panel-action pull-right'>><'col-sm-3'f>>" +
@@ -941,10 +943,19 @@ $('a[rel="imagePopover"]').popover({
        
        $("a.action-column[aria-describedby=" +$(".task-popover.popover").attr("id") + "]")
        .find(".add-icon").removeClass("add-icon").addClass("pen-icon");
- })   
+ });
+    imgError();
+ 
 });
 
+function imgError(image) {
+    $(image).onerror = "";
+    //image.src = "/images/noimage.gif";
+    $(image).addClass("hidden");//= "/images/noimage.gif";
+    $(image).parent("span").append("<span>RK</span>");//= "/images/noimage.gif";
 
+    return true;
+} 
 function allotRegionToUser(element) {
     var id = $(element).parents('div').attr("id")
     var src = $(element).parents('li').find('img').attr("src");
